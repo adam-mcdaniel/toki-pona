@@ -1,0 +1,6 @@
+ma nanpa li jo e kulupu nanpa e lawa pali.
+ma nanpa li mute:
+
+ma nanpa kulupu - li jo e lawa pali.
+ma nanpa sike - li 'ma nanpa kulupu' li jo kin e pali mute nanpa.
+ma nanpa kasi - li 'ma nanpa sike' li jo kin e nasin pi pali nanpa wan.

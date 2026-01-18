@@ -1,0 +1,30 @@
+ilo sona mute la, ilo kon lawa li lawa e ilo kon ante. ona la, ilo kon ante li ken lawa pona e insa pi ilo sona.
+tenpo pini la, ilo kon lawa li pana e sitelen toki taso. jan li wile kepeken ilo ni la, jan li lawa e ona kepeken linja toki(?). tenpo ni la, ilo mute li ken pana e sitelen kule. jan mute li lawa e ilo kepeken nasin pi sitelen kule(?); taso, jan ante li awen kepeken nasin pi linja toki.
+
+
+== kepeken ==
+tenpo ni la, ilo sona mute li kepeken ilo kon lawa ni:
+
+ilo Tosi (DOS)
+ilo Winto (Windows)
+ilo Juni (Unix)
+ilo Pijesi (BSD)
+ilo Solawi (Solaris)
+ilo Ilumo (Illumos)
+ilo Openinsijana (OpenIndiana)
+ilo Tawin (Darwin)
+ilo Makinto (Macintosh/MacOS)
+ilo Linu (Linux)
+ilo Asilinu (Arch Linux)
+ilo Tepijan (Debian)
+ilo Upuntu (Ubuntu)
+ilo Petola (Fedora)
+ilo Sento (CentOS)
+ilo Kentu (Gentoo)
+ilo Mansiwa (Mandriva)
+ilo Papi (Puppy Linux) (tan jan Pawi Kola(Barry Kauler) lon ma Oselija)
+ilo toki li kepeken ilo kon lawa ni:
+
+ilo Antowi (Android) (tan ilo Linu)
+ilo iOS (tan ilo Tawin)
+ilo Sepan (Symbian) (ilo toki Nokija li kepeken e ni)

@@ -1,0 +1,660 @@
+jan li kepeken nanpa tawa sona ni: ijo li mute anu lili?
+nimi nanpa pi toki pona li "wan" li "tu" li "mute". jan mute la, nimi "luka" li tu tu wan; nimi "mute" li luka luka luka luka; nimi "ale" li mute mute mute mute mute.
+toki Inli en toki ante mute la, nasin nanpa Alapi li lon. nasin ni li kepeken sitelen nanpa luka luka:
+
+{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+
+== nasin pi sitelen nanpa ante ==
+jan li sitelen e nanpa kepeken nasin mute.
+toki pona la, kon pi nimi nanpa li toki e suli sama lon tenpo ale. "luka" lon open li sama "luka" lon pini.
+taso, toki ante la, nasin ante li lon.
+
+
+=== nasin nanpa Loma ===
+
+nasin nanpa Loma la, sitelen "I" li toki e nanpa "wan". sitelen "V" li toki e nanpa "luka". sitelen "VI" li toki e nanpa "luka wan". taso, sitelen "IV" li toki e nanpa "tu tu".
+nasin ni la, sitelen pi nanpa lili li lon open sitelen pi nanpa suli la, nanpa lili li weka tan nanpa suli. sina weka e nanpa "wan" tan nanpa "luka" la, nanpa "tu tu" li kama.
+
+I = wan (1)
+V = luka (5)
+X = luka luka (10)
+L = mute mute luka luka (50)
+C = ale (100)
+D = luka ale[nnp] (500)
+M = luka luka ale[nnp] (1000)
+
+
+=== nasin nanpa Alapi ===
+nasin nanpa Alapi la, suli pi sitelen nanpa li ante mute. toki mute li sitelen e nanpa kepeken nasin nanpa Alapi.
+sitelen "1" li toki e nanpa "wan". sitelen "0" li toki e nanpa "ala".
+taso, sitelen "10" li toki e nanpa "luka luka".
+nasin ni la, sitelen nanpa li lon open sitelen nanpa ante la, nanpa open luka luka li sin. sitelen nanpa mute li lon la, nanpa li suli mute.
+
+ale = 100
+mute = 20
+luka = 5
+tu = 2
+wan = 1
+nanpa "123" li sama kulupu nanpa "ale" wan en kulupu nanpa "luka luka" tu en kulupu nanpa "wan" tu wan.
+nasin nanpa Alapi la, jan li ken sitelen e nanpa suli kepeken sitelen nanpa pi mute lili.
+
+
+== kulupu nanpa ==
+nanpa li lon kulupu. kulupu lili li kipisi pi kulupu suli.
+
+
+=== nanpa pi nanpa ijo ===
+
+jan ale li sona e nanpa pi nanpa ijo. jan li nanpa e ijo kepeken nanpa ni. nanpa ni li wan, li tu, li tu wan, li tu tu, li luka, li nanpa ante sama ona. jan li sona e kulupu ni lon tenpo pini ale.
+nasin pi tenpo pini la, nanpa 0 li lon ala kulupu ni. tenpo pini weka la, jan pi ma Elina li pilin e ni: nanpa 0 li nanpa ala. tenpo sike 1800 en ante pi poka pini ona la, jan pi sona nanpa li pana e nanpa 0 tawa kulupu nanpa  pi nanpa ijo. 
+ijo li lon kulupu la, nanpa ijo li nanpa. kulupu li ken jo e ijo ala la, nanpa 0 li nanpa pi nanpa ijo. tenpo lon la, kulupu nanpa pi nanpa ijo li ken jo e nanpa 0, li ken jo ala e ona.
+sitelen pi kulupu ni li sitelen 
+  
+    
+      
+        
+          N
+        
+      
+    
+    {\displaystyle \mathbb {N} }
+  
+, tan nimi "natural" (toki Inli, "pi nasin ma"). nanpa 0 li lon ona la, ona li 
+  
+    
+      
+        
+          
+            N
+          
+          
+            0
+          
+        
+      
+    
+    {\displaystyle \mathbb {N} _{0}}
+  
+; ante la, ona li 
+  
+    
+      
+        
+          
+            N
+          
+          
+            1
+          
+        
+      
+    
+    {\displaystyle \mathbb {N} _{1}}
+  
+.
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    N
+                  
+                  
+                    0
+                  
+                
+              
+              
+                
+                =
+                
+                  {
+                  
+                    0
+                    ,
+                    1
+                    ,
+                    2
+                    ,
+                    3
+                    ,
+                    …
+                  
+                  }
+                
+              
+            
+            
+              
+                
+                  
+                    N
+                  
+                  
+                    1
+                  
+                
+              
+              
+                
+                =
+                
+                  {
+                  
+                    1
+                    ,
+                    2
+                    ,
+                    3
+                    ,
+                    …
+                  
+                  }
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\mathbb {N} _{0}&=\left\{0,1,2,3,\dots \right\}\\\mathbb {N} _{1}&=\left\{1,2,3,\dots \right\}\end{aligned}}}
+  
+
+
+=== nanpa pi wan nanpa ===
+
+nanpa pi wan nanpa li ken suli tawa nanpa 0 li ken lili tawa nanpa 0 li ken nanpa 0. taso, nanpa li lon kulupu ni la, ona en nanpa pi poka ona li ante lon nanpa wan.
+seme la, nanpa li ken lili tawa nanpa 0? kili wan en kili wan ante li kili tu. ni la, kili tu en kili pi mute seme li kili wan? mute ni li ken ala nanpa e ijo. ona o lili tawa nanpa 0. ona li weka wan (sitelen nanpa Alapi: −1).
+nanpa ale li jo e nanpa pi poka ante. mi kepeken nimi ni tan ni: palisa nanpa la, nanpa tu ni li lon poka ante tawa nanpa 0. nanpa 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ li lon la, nanpa 
+  
+    
+      
+        −
+        x
+      
+    
+    {\displaystyle -x}
+  
+ li nanpa ona pi poka ante. sina wan e nanpa 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ e nanpa 
+  
+    
+      
+        −
+        x
+      
+    
+    {\displaystyle -x}
+  
+ la, nanpa 0 li lon.
+sitelen pi kulupu ni li sitelen 
+  
+    
+      
+        
+          Z
+        
+      
+    
+    {\displaystyle \mathbb {Z} }
+  
+, tan nimi "Zahlen" (toki Tosi, "nanpa").
+
+  
+    
+      
+        
+          Z
+        
+        =
+        
+          {
+          
+            …
+            ,
+            −
+            3
+            ,
+            −
+            2
+            ,
+            −
+            1
+            ,
+            0
+            ,
+            1
+            ,
+            2
+            ,
+            3
+            ,
+            …
+          
+          }
+        
+      
+    
+    {\displaystyle \mathbb {Z} =\left\{\dots ,-3,-2,-1,0,1,2,3,\dots \right\}}
+  
+
+
+=== nanpa kipisi ===
+
+nanpa kipisi la, jan li ken toki e kipisi ijo.
+jan tu li jo e kili tu. pali pona la, jan wan li awen jo e kili wan, jan ante li awen jo e kili wan ante.
+jan tu li jo e kili wan la, ona o seme? ona li kipisi e kili. jan 
+  
+    
+      
+        2
+      
+    
+    {\displaystyle 2}
+  
+ li kipisi e kili 
+  
+    
+      
+        1
+      
+    
+    {\displaystyle 1}
+  
+ la, jan wan li jo e kili 
+  
+    
+      
+        
+          
+            1
+            2
+          
+        
+      
+    
+    {\displaystyle {\frac {1}{2}}}
+  
+.
+ale la, ijo pi suli 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ li kama kipisi 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+, la kipisi wan li suli 
+  
+    
+      
+        
+          
+            x
+            y
+          
+        
+      
+    
+    {\displaystyle {\frac {x}{y}}}
+  
+. nanpa 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ en nanpa 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ li nanpa pi wan nanpa; nanpa 
+  
+    
+      
+        y
+      
+    
+    {\displaystyle y}
+  
+ li ken ala nanpa 0.
+sona nanpa la, nanpa ale pi wan nanpa li nanpa kipisi, tan ni: nanpa 
+  
+    
+      
+        
+          
+            x
+            1
+          
+        
+      
+    
+    {\displaystyle {\frac {x}{1}}}
+  
+ li nanpa 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+. taso, jan li toki e nanpa kipisi la, tenpo la, jan li wile ala toki e nanpa pi wan nanpa.
+sitelen pi kulupu ni li sitelen 
+  
+    
+      
+        
+          Q
+        
+      
+    
+    {\displaystyle \mathbb {Q} }
+  
+, tan nimi "quotient" (toki Inli, "nanpa ni: ona li tan pali pi kipisi nanpa").
+
+
+=== nanpa ma ===
+
+ijo ale la, suli ona li nanpa ma anu nanpa sijelo. nanpa ma pi ale ala li nanpa kipisi. mi toki e nanpa tu pi nasa ni.
+nanpa sike (sitelen la: 
+  
+    
+      
+        π
+      
+    
+    {\displaystyle \pi }
+  
+) li nanpa kipisi ala. sike la, palisa insa ona li suli linja wan la, selo ona li suli linja pi nanpa ni. 
+kin la, noka leko supa(?) pi nanpa tu (sitelen la: 
+  
+    
+      
+        
+          
+            2
+          
+        
+      
+    
+    {\displaystyle {\sqrt {2}}}
+  
+) li nanpa kipisi ala. sijelo pi poka tu wan li jo e pini poka leko la, poka lili ona li suli linja wan la, poka suli ona li suli linja pi nanpa ni.
+nanpa li nanpa kipisi ala la, nasin nanpa Alapi la, sitelen ona li pini ala li sike ala. jan li sitelen taso e open sitelen ona, li kepeken sitelen "…" tawa pini ona pi pini ala. ni la, mi ken sitelen e ni:
+
+  
+    
+      
+        π
+        =
+        3.14159...
+      
+    
+    {\displaystyle \pi =3.14159...}
+  
+ 
+kulupu nanpa ni li sama linja nanpa. nanpa wan en nanpa ante li lon linja la, nanpa ante sin li lon insa ona, li lon kulupu. nanpa li tan ala kulupu ni la, linja nanpa li jo ala e ona.
+sitelen pi kulupu ni li sitelen 
+  
+    
+      
+        
+          R
+        
+      
+    
+    {\displaystyle \mathbb {R} }
+  
+, tan nimi "real" (toki Inli, "lon sijelo; lon ma").
+
+
+=== nanpa nasa ===
+
+nanpa nasa anu nanpa pi nasin tu li suli e kulupu pi nanpa ma. ona li pona tawa toki nanpa pi nimi mute(?).
+sina sewi e nanpa seme tawa tu la, nanpa weka wan li lon? nanpa ni li nanpa ma ala li nanpa sin. jan li kepeken sitelen 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ tawa nanpa ni, tan nimi "imaginary" (toki Inli, "ijo kon; lon ala sijelo"). lipu ni la, toki pona la, mi pana e nimi "nanpa kon wan" tawa ona.
+sina wan e nanpa 
+  
+    
+      
+        1
+      
+    
+    {\displaystyle 1}
+  
+ e nanpa 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ la, nanpa seme li lon? sitelen sin li lon ala tawa ni; jan li sitelen taso e pali wan sama ni: 
+  
+    
+      
+        1
+        +
+        i
+      
+    
+    {\displaystyle 1+i}
+  
+. jan li kepeken nanpa 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ sama nanpa nimi ante. nasin pali li pona tawa nanpa nimi la, ona li pona tawa nanpa 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+. toki ken la:
+
+  
+    
+      
+        (
+        3
+        +
+        6
+        i
+        )
+        +
+        (
+        5
+        −
+        2
+        i
+        )
+        =
+        (
+        8
+        +
+        4
+        i
+        )
+      
+    
+    {\displaystyle (3+6i)+(5-2i)=(8+4i)}
+  
+
+ni la, mi ken sitelen e nanpa sama ni: 
+  
+    
+      
+        a
+        +
+        b
+        i
+      
+    
+    {\displaystyle a+bi}
+  
+. nanpa 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ en nanpa 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ li nanpa ma; nanpa 
+  
+    
+      
+        i
+      
+    
+    {\displaystyle i}
+  
+ li nanpa kon wan. nanpa ni li jo e suli tu:
+
+suli ma ona li nanpa 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+.
+suli kon ona li nanpa 
+  
+    
+      
+        b
+        i
+      
+    
+    {\displaystyle bi}
+  
+.
+jan li sitelen e nanpa ni lon supa pi nanpa nasa. nanpa li suli ma la, mi tawa poka. nanpa li suli kon la, mi tawa sewi.
+tenpo pini la, jan li pilin e ni: "nanpa ni li nasa. sona ona li suli ike." ni la, sitelen pi kulupu ni li sitelen 
+  
+    
+      
+        
+          C
+        
+      
+    
+    {\displaystyle \mathbb {C} }
+  
+, tan nimi "complex" (toki Inli, "pi sona suli; nasa ike").
+
+
+=== nanpa pi nasin mute ===
+kulupu ante li lon. nanpa li ken jo e nasin tu tu, e nasin luka tu wan, e nasin luka luka luka wan, e nasin pi nanpa ante.
+kulupu nanpa pi nasin tu tu la, sitelen li sitelen 
+  
+    
+      
+        
+          H
+        
+      
+    
+    {\displaystyle \mathbb {H} }
+  
+. nasin luka tu wan la, sitelen 
+  
+    
+      
+        
+          O
+        
+      
+    
+    {\displaystyle \mathbb {O} }
+  
+. nasin luka luka luka wan la, sitelen 
+  
+    
+      
+        
+          S
+        
+      
+    
+    {\displaystyle \mathbb {S} }
+  
+.
+
+
+== tan sona ==

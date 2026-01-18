@@ -1,0 +1,7 @@
+toki ilo Wisupesi (toki Inli la: Visual Basic) li toki ilo tan kulupu Mikoso (toki Inli la: Microsoft). ilo kon lawa Winto li pali e ilo ni.
+
+toki ilo la, ilo sona li toki e ni: "ma ale, toki!"
+
+Private Sub Form_Load()
+MsgBox ("ma ale, toki!")
+End Sub

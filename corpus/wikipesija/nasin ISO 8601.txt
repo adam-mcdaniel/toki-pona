@@ -1,0 +1,42 @@
+nasin "ISO 8601" li nasin pi sitelen tenpo. kulupu "ISO" li pali e ona lon tenpo sike nanpa 1988, li sin e ona lon tenpo sike pini kama.
+
+
+== lipu pi tenpo suno ==
+nasin ISO 8601 li kepeken e lipu nanpa tenpo pi jan Kekoli. tenpo ni la, ma mute li nanpa e tenpo suno kepeken lipu ni. tenpo pini suli la, ma mute li sitelen e tenpo suno kepeken lipu ante.
+sin la, tenpo pini ale li sitelen kepeken lipu Kekoli. tan ni la, sitelen tenpo ISO 8601 en sitelen tenpo pi tenpo pini li ken ante.
+
+
+== nasin sitelen pi nanpa tenpo suno ==
+nanpa pi tenpo sike li sitelen kepeken nanpa Alapi tu tu. tenpo sike pi nasin Kolisu li sama.
+nanpa pi tenpo mun li sitelen kepeken nanpa Alapi tu. (tenpo mun nanpa wan li "01". tenpo mun nanpa luka luka tu li "12".)
+nanpa pi tenpo suno li sitelen kepeken nanpa Alapi tu. (tenpo suno nanpa wan li "01". tenpo suno nanpa mute luka luka wan li "31".)
+nasin ni la, tenpo open pi lipu Wikipesija li "2021-04-23". tenpo pi "tenpo mun nanpa 10 loje (toki Losi la: Красный Октябрь)" pi ma Losi li "1917-11-05". (tenpo pini ni la, lipu nanpa tenpo pi ma Losi li ante. tenpo suno ni li lon tenpo mun nanpa 10 lon lipu pini.)
+
+
+== nasin sitelen pi tenpo lili ==
+nasin tenpo pi ma mute la, tenpo suno li jo e tenpo Ola (toki Lasina la: hōra) 24. tenpo Ola wan li jo e tenpo Minuta (toki Lasina la: minūta) 60. tenpo Minuta wan li jo e tenpo Sekuntu (toki Lasina la: secundus) 60. nasin "ISO 8601" li ken sitelen e tenpo ni.
+
+sitelen wan li toki e tenpo suno, e tenpo lili la, o open toki e tenpo lili kepeken sitelen "T".
+nanpa ale li sitelen kepeken nanpa Alapi tu.
+ni li ken: nanpa ale li weka ala tan ona ante ("083000"), li ken jo e sitelen ":" weka ("08:30:00").
+ni li ken: sitelen li toki e tenpo Sekuntu ("08:30:00"), li toki ala e ona ("08:30").
+
+
+== nasin sitelen pi ma tenpo ==
+ma ante la, suno li open, li pini lon tenpo ante. ma ante li jo e "ma tenpo" ante. ona la, nanpa tenpo li ante.
+nanpa ISO 8601 li ken sitelen e ante ni.
+
+sitelen "-" li toki e ni: ma tenpo ni li lon monsi pi tenpo "UTC". (tenpo "UTC" 12:00 la, tenpo 12:00 pi ma ni li lon tenpo kama).
+sitelen "+" li toki e ni: ma tenpo ni li lon sinpin pi tenpo "UTC", li sama tenpo "UTC". (tenpo "UTC" 12:00 la, tenpo 12:00 pi ma ni li lon tenpo ni anu tenpo pini).
+tenpo ni li tenpo "UTC" la, sitelen "Z" taso li lon.
+nanpa Alapi tu li sitelen e ante pi tenpo Ola tan tenpo UTC en tenpo pi ma ni.
+ken la, nanpa Alapi tu ante li sitelen e ante pi tenpo Minuta tan tenpo UTC en tenpo pi ma ni. sama sitelen pi tenpo lili, sitelen ":" li ken.
+
+
+== tenpo ISO lon ==
+tenpo suno ni: 2026-01-18
+tenpo ni kepeken tenpo "UTC": 2026-01-18T20:16:07Z (nasin ante: 20260118T201607Z)
+
+
+== nimi nasin sin ==
+lipu "ISO 8601" pi lipu Wikipedia (toki Inli)

@@ -1,0 +1,14 @@
+ante nanpa kiki li ante nanpa. jan li sona e ante nanpa kiki pi kiki wan tan ni: kiki pi kiki leko li jo e kiki ni la, selo wan li suli la, selo ante li suli kin. jan li ken alasa kin lon sike. ante nanpa kiki li kama sike. ni la, jan li sitelen e ijo sike (tawa nasa, tawa mun, wawa weka…) kepeken ante nanpa kiki. jan li ken sitelen kin e ante nanpa kiki kepeken ali nanpa pi pini ala kepeken linja sama lon nasin weka.
+sin en cos en tan en ante li ante nanpa kiki. ona li jo e nasin ante mute.
+
+
+== lon kiki pi kiki leko ==
+
+kiki lili li jo e ante nanpa kiki lon kiki pi kiki leko. kiki θ li weka e selo a li jo e selo leko b e selo ante c. ni la, ante nanpa kiki ona li seme?
+
+sin θ = a / h
+cos θ = b / h
+tan θ = a / b
+cot θ = b / a
+sec θ = h / b
+csc θ = h / a

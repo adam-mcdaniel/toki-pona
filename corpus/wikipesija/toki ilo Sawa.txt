@@ -1,0 +1,7 @@
+toki ilo Sawa (toki Inli: Java) li toki ilo mute pi ilo sona. jan mute li kepeken ona tawa pali mute. jan li wile sitelen kepeken toki ilo Sawa la jan li wile kepeken sitelen “{“ li wile kepeken sitelen “}” mute. sitelen anpa li toki “ma ale o, toki!” kepeken toki ilo Sawa.
+
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("ma ale o, toki!"); 
+    }
+}

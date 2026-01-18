@@ -1,0 +1,227 @@
+leko li sijelo lipu pi poka palisa anu sijelo tomo pi sinpin supa. mute la, jan li pali e ijo la, sijelo ijo li leko. ona li pona tan ni: jan li wile sona e suli selo ona e suli lipu ona e suli sijelo ona, ni li wile e pali pi lili mute a. 
+
+
+== sijelo supa ==
+jan pi toki pona li kepeken nimi "leko supa" li kepeken nimi "leko lipu" tawa leko ni. nimi ni li toki e ni: ona li lon ale ma pi nasin tu.
+
+
+=== leko supa pona ===
+
+leko supa pona li jo e poka tu tu. poka ale ona li palisa li suli sama. kin la, pini poka ale ona li sama. suli pi pini poka ona li pini poka leko. 
+poka wan ona li suli 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ la:
+
+suli selo ona li suli 
+  
+    
+      
+        4
+        s
+      
+    
+    {\displaystyle 4s}
+  
+.
+suli insa ona li suli 
+  
+    
+      
+        
+          s
+          
+            2
+          
+        
+      
+    
+    {\displaystyle s^{2}}
+  
+.
+
+
+=== leko supa ante ===
+leko supa ante li jo e poka tu tu. ona li sama leko lipu pona; taso, ona li suli lon nasin wan li lili lon nasin ante. lipu leko pona ale li leko lipu, taso leko lipu pi ale ala li lipu leko pona.
+ona li jo e suli tu lon nasin ante. suli wan li suli 
+  
+    
+      
+        ℓ
+      
+    
+    {\displaystyle \ell }
+  
+ la, suli ante li suli 
+  
+    
+      
+        w
+      
+    
+    {\displaystyle w}
+  
+ la, leko lipu ni la:
+
+suli selo ona li suli 
+  
+    
+      
+        2
+        ℓ
+        +
+        2
+        w
+      
+    
+    {\displaystyle 2\ell +2w}
+  
+.
+suli insa ona li suli 
+  
+    
+      
+        ℓ
+        w
+      
+    
+    {\displaystyle \ell w}
+  
+.
+
+
+== sijelo tomo ==
+jan pi toki pona li kepeken nimi "leko sijelo" li kepeken nimi "leko tomo" tawa leko ni. nimi ni li toki e ni: ona li lon ale ma pi nasin tu.
+
+
+=== leko sijelo pona ===
+
+leko sijelo pona li jo e sinpin luka wan. sinpin ale ona li leko lipu pona. ale ma pi musi Manka li ni mute.
+pini sinpin ona li suli 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ la:
+
+suli selo ona li suli 
+  
+    
+      
+        6
+        
+          s
+          
+            2
+          
+        
+      
+    
+    {\displaystyle 6s^{2}}
+  
+.
+suli insa ona li suli 
+  
+    
+      
+        
+          s
+          
+            3
+          
+        
+      
+    
+    {\displaystyle s^{3}}
+  
+.
+
+
+=== leko sijelo ante ===
+leko sijelo ante li jo e sinpin luka wan. ona en leko sijelo pona li ante sama ni: leko lipu pona en leko lipu ante li ante. sinpin ale ona li leko lipu. 
+ona li jo e suli tu wan lon nasin ante. suli tu wan ni li suli 
+  
+    
+      
+        ℓ
+      
+    
+    {\displaystyle \ell }
+  
+ li suli 
+  
+    
+      
+        w
+      
+    
+    {\displaystyle w}
+  
+ li suli 
+  
+    
+      
+        h
+      
+    
+    {\displaystyle h}
+  
+ la:
+
+suli selo ona li suli 
+  
+    
+      
+        2
+        ℓ
+        w
+        +
+        2
+        w
+        h
+        +
+        2
+        ℓ
+        h
+      
+    
+    {\displaystyle 2\ell w+2wh+2\ell h}
+  
+.
+suli insa ona li suli 
+  
+    
+      
+        ℓ
+        w
+        h
+      
+    
+    {\displaystyle \ell wh}
+  
+.
+
+
+== pini poka ==
+
+sike wan la, suli pi pini poka leko li wan pi kipisi tu tu. jan li sitelen e leko lili lon ona la, jan li awen sona e ni.
+
+
+== ijo ante lon sona nanpa ==
+jan ante li kepeken nimi "leko" tawa ni. toki pi lipu ni la, ona li ken sama ala leko, taso ona li sike ala li sama leko lon nasin mute.
+
+sijelo supa palisa
+sijelo tomo sinpin
+
+
+== ijo lon pi sijelo leko ==

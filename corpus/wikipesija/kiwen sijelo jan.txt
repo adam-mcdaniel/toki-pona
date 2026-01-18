@@ -1,0 +1,129 @@
+kiwen sijelo jan la, jan li jo e kiwen insa mute. jan sin li jo e kiwen insa tu ale mute mute mute luka luka (TAMMMLL, 270). jan pi jan lili ala li jo e kiwen insa tu ale luka wan (TALW, 206) tan ni: kiwen insa mute li kama wan.
+
+
+== meso sijelo ==
+
+jan pi jan lili ala li jo e kiwen insa mute mute mute mute (MMMM, 80) lon kiwen sijelo jan pi meso sijelo
+
+
+=== lawa ===
+ kiwen insa mute luka tu tu (MLTT, 29) li lon lawa jan.
+lawa poka insa (8):
+sinpin lawa - (frontale)
+sewi lawa (2) - (parietale)
+monsi lawa - (occipitale)
+poka lawa (2) - (temporale)
+monsi oko - (sphenoidale)
+monsi nena - (ethmoidale)
+lawa sinpin (14):
+poka kute (2) - (zygomaticum)
+poka oko (2) - (lacrimale)
+insa nena (2) - (nasal)
+anpa nena (2) - (concha nasalis inferior)
+meso nena - (vomer)
+sewi uta (2) - (maxilla)
+anpa uta - (mandibula)
+monsi uta (2) - (palatinum)
+insa kute (6):
+suli pi insa kute (2) - (malleus)
+palisa pi insa kute (2) - (incus)
+lupa pi insa kute (2) - (stapes)
+palisa uta (1) - (hyoideum)
+
+
+=== sinpin sijelo ===
+kiwen insa mute luka (ML, 25) li lon sinpin sijelo.
+
+
+==== 1. insa sijelo ====
+insa sijelo (toki Lasina la: sternum) li jo e kiwen insa wan (W, 1). ni li jo e kipisi tu wan:
+
+insa sijelo sewi - (manubrium sterni)
+insa sijelo meso - (corpus sterni)
+insa sijelo anpa - (prosessus xiphoid)
+
+
+==== 2. poka sijelo ====
+poka sijelo (toki Lasina la: costa) li jo e kiwen insa mute tu tu (MTT, 24). ni li jo e kulupu tu wan: 
+
+poka pi poka sijelo (7 lon poka wan) - (costae verae)
+nasa pi poka sijelo (3 lon poka wan) - (costae spuriae)
+weka pi poka sijelo (2 lon poka wan) - (costae fluctuantes)
+jan pi mute lili li ken jo e mute ni ante.
+
+
+=== palisa monsi ===
+
+kiwen insa mute luka wan (MLW, 26) li lon palisa monsi (toki Lasina la: vertebrae). jan li ken anpa li ken kama sinpin tan palisa monsi.
+
+palisa lawa (7) - (vertebrae cervicales)
+palisa monsi sewi (12) - (vertebrae thoracicae)
+palisa monsi anpa (5) - (vertebrae lumbales)
+anpa monsi sewi - (sacrum)
+anpa monsi anpa - (coccygis)
+
+
+== palisa sijelo ==
+jan pi jan lili ala li jo e kiwen sijelo jan pi palisa sijelo wan ale mute luka wan (WAMLW, 126)
+
+
+=== poka sinpin ===
+kiwen insa tu tu (TT, 4) li lon poka pi sinpin sijelo (toki Lasina la: pectorale)
+
+poka sinpin palisa (2) - (clavicula)
+poka sinpin nena (2) - (scapula)
+
+
+=== luka ===
+kiwen insa mute luka luka (MLL, 30) li lon luka wan. kiwen insa mute mute mute (MMM, 60) li lon luka ale. lon anpa la, mi kepeken e mute lon luka wan.
+
+sewi luka - (humerus)
+meso luka - (pallatum)
+anpa luka poka - (ulna)
+anpa luka weka - (radius)
+supa luka (27):
+sike luka (8) - (carpal):
+sike luka supa - (trapezium)
+sike luka sijelo - (trapezoid)
+sike luka lawa - (capitatum)
+sike luka ilo - (hamatum)
+sike luka tomo - (scaphoid)
+sike luka mun - (lunatum)
+sike luka nena - (triquetral)
+sike luka kili - (pisiforme)
+meso pi supa luka (5) - (metacarpal)
+palisa luka (14) - (phalanx):
+palisa luka poka (5)
+palisa luka meso (4)
+palisa luka weka (5)
+
+
+=== poka monsi ===
+kiwen insa luka tu wan (LTW, 8) li lon poka pi anpa monsi (toki Lasina la: coxae)
+
+poka monsi sewi (2) - (illium)
+poka monsi meso (2) - (pubis)
+poka monsi anpa (2) - (ischii)
+
+
+=== noka ===
+kiwen insa mute luka luka (MLL, 30) li lon noka wan. kiwen insa mute mute mute (MMM, 60) li lon noka ale. lon anpa la, mi kepeken e mute lon luka wan.
+
+sewi noka - (femur)
+meso noka - (patella)
+anpa noka poka - (tibia)
+anpa noka weka - (fibula)
+supa noka (26):
+sike noka (7) - (tarsal):
+sike noka ilo meso - (cuneiformis medial)
+sike noka ilo insa - (cuneiformis intermedial)
+sike noka ilo poka - (cuneiformis lateral)
+sike noka tomo - (naviculare)
+sike noka leko - (cuboideum)
+sike noka sewi - (talus)
+sike noka anpa - (calcaneus)
+meso pi supa noka (5)
+palisa noka (14) - (phalanx):
+palisa noka poka (5)
+palisa noka meso (4)
+palisa noka weka (5)

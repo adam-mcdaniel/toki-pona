@@ -1,0 +1,4 @@
+toki ilo Pason (toki Inli la: Python) li toki ilo tan jan Kito Wan Josun(Guido Van Rossum). nimi ni li kama tan sitelen musi ni: kulupu sike pi tawa lon kon pi Monty Python.
+toki ilo Pason la, ilo sona li toki e ni: "toki, ma ale o!"
+
+print("toki, ma ale o!")

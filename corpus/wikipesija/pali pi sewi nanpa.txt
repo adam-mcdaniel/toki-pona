@@ -1,0 +1,1195 @@
+pali pi sewi nanpa li sama pali pi mute nanpa lon sike. pali ni la, mi ken toki e ni:
+
+  
+    
+      
+        
+          2
+          
+            3
+          
+        
+        =
+        2
+        ×
+        2
+        ×
+        2
+        =
+        8
+      
+    
+    {\displaystyle 2^{3}=2\times 2\times 2=8}
+  
+
+o sewi e tu tawa tu wan la, luka tu wan li lon.
+
+kepeken nanpa nimi la, mi sitelen e ni: 
+  
+    
+      
+        
+          b
+          
+            n
+          
+        
+      
+    
+    {\displaystyle b^{n}}
+  
+. nanpa 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ li nanpa anpa la, nanpa 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ li nanpa sewi la, mi ken sitelen e ni:
+
+  
+    
+      
+        
+          b
+          
+            n
+          
+        
+        =
+        
+          
+            
+              
+                b
+                ×
+                ⋯
+                ×
+                b
+              
+              ⏟
+            
+          
+          
+            
+              nimi 
+            
+            b
+            
+               pi mute 
+            
+            n
+          
+        
+      
+    
+    {\displaystyle b^{n}=\underbrace {b\times \dots \times b} _{{\text{nimi }}b{\text{ pi mute }}n}}
+  
+
+poka open la: o sewi e nanpa 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ tawa nanpa 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+.
+
+
+== sona lawa ==
+tan ni la, mi ken sona e ni: mi mute e nanpa 
+  
+    
+      
+        
+          b
+          
+            m
+          
+        
+      
+    
+    {\displaystyle b^{m}}
+  
+ tawa nanpa 
+  
+    
+      
+        
+          b
+          
+            n
+          
+        
+      
+    
+    {\displaystyle b^{n}}
+  
+ la, seme li lon?
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  b
+                  
+                    m
+                  
+                
+                ×
+                
+                  b
+                  
+                    n
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        b
+                        ×
+                        ⋯
+                        ×
+                        b
+                      
+                      ⏟
+                    
+                  
+                  
+                    
+                      nimi 
+                    
+                    b
+                    
+                       pi mute 
+                    
+                    m
+                  
+                
+                ×
+                
+                  
+                    
+                      
+                        b
+                        ×
+                        ⋯
+                        ×
+                        b
+                      
+                      ⏟
+                    
+                  
+                  
+                    
+                      nimi 
+                    
+                    b
+                    
+                       pi mute 
+                    
+                    n
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        b
+                        ×
+                        ⋯
+                        ×
+                        b
+                      
+                      ⏟
+                    
+                  
+                  
+                    
+                      nimi 
+                    
+                    b
+                    
+                       pi mute 
+                    
+                    m
+                    +
+                    n
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  b
+                  
+                    m
+                    +
+                    n
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}b^{m}\times b^{n}&=\underbrace {b\times \dots \times b} _{{\text{nimi }}b{\text{ pi mute }}m}\times \underbrace {b\times \dots \times b} _{{\text{nimi }}b{\text{ pi mute }}n}\\&=\underbrace {b\times \dots \times b} _{{\text{nimi }}b{\text{ pi mute }}m+n}\\&=b^{m+n}\end{aligned}}}
+  
+
+mi ken sona e ni: mi sewi e nanpa 
+  
+    
+      
+        
+          b
+          
+            m
+          
+        
+      
+    
+    {\displaystyle b^{m}}
+  
+ tawa nanpa 
+  
+    
+      
+        
+          b
+          
+            n
+          
+        
+      
+    
+    {\displaystyle b^{n}}
+  
+ la, seme li lon?
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  
+                    (
+                    
+                      b
+                      
+                        m
+                      
+                    
+                    )
+                  
+                  
+                    n
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        
+                          b
+                          
+                            m
+                          
+                        
+                        ×
+                        ⋯
+                        ×
+                        
+                          b
+                          
+                            m
+                          
+                        
+                      
+                      ⏟
+                    
+                  
+                  
+                    
+                      nimi pi mute 
+                    
+                    n
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  
+                    
+                      
+                        b
+                        
+                          m
+                          +
+                          ⋯
+                          +
+                          m
+                        
+                      
+                      ⏟
+                    
+                  
+                  
+                    
+                      nimi 
+                    
+                    m
+                    
+                       pi mute 
+                    
+                    n
+                  
+                
+              
+            
+            
+              
+              
+                
+                =
+                
+                  b
+                  
+                    m
+                    n
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}\left(b^{m}\right)^{n}&=\underbrace {b^{m}\times \dots \times b^{m}} _{{\text{nimi pi mute }}n}\\&=\underbrace {b^{m+\dots +m}} _{{\text{nimi }}m{\text{ pi mute }}n}\\&=b^{mn}\end{aligned}}}
+  
+
+
+== nanpa ante pi kipisi wan ==
+jan li ken toki pona e pali pi sewi nanpa kepeken pali tan sona pi pali nanpa. 
+
+
+=== nanpa sewi li nanpa ala ===
+tan open la, mi sona e ni: 
+  
+    
+      
+        
+          b
+          
+            m
+          
+        
+        ×
+        
+          b
+          
+            n
+          
+        
+        =
+        
+          b
+          
+            m
+            +
+            n
+          
+        
+      
+    
+    {\displaystyle b^{m}\times b^{n}=b^{m+n}}
+  
+. toki ni li pona taso tawa nanpa pi nanpa ijo. 
+taso, mi ken wile e ni: lawa ni o lon tawa nanpa ale pi wan nanpa. nanpa 
+  
+    
+      
+        ℓ
+        =
+        m
+        +
+        n
+      
+    
+    {\displaystyle \ell =m+n}
+  
+ la, mi ken ni:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  b
+                  
+                    m
+                  
+                
+                ×
+                
+                  b
+                  
+                    n
+                  
+                
+              
+              
+                
+                =
+                
+                  b
+                  
+                    m
+                    +
+                    n
+                  
+                
+              
+            
+            
+              
+                
+                  b
+                  
+                    m
+                  
+                
+                ×
+                
+                  b
+                  
+                    ℓ
+                    −
+                    m
+                  
+                
+              
+              
+                
+                =
+                
+                  b
+                  
+                    ℓ
+                  
+                
+              
+            
+            
+              
+                
+                  b
+                  
+                    ℓ
+                    −
+                    m
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      b
+                      
+                        ℓ
+                      
+                    
+                    
+                      b
+                      
+                        m
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}b^{m}\times b^{n}&=b^{m+n}\\b^{m}\times b^{\ell -m}&=b^{\ell }\\b^{\ell -m}&={\frac {b^{\ell }}{b^{m}}}\end{aligned}}}
+  
+
+nimi 
+  
+    
+      
+        ℓ
+      
+    
+    {\displaystyle \ell }
+  
+ en nimi 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ li sama la, ni li kama e ni:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  b
+                  
+                    m
+                    −
+                    m
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      b
+                      
+                        m
+                      
+                    
+                    
+                      b
+                      
+                        m
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  b
+                  
+                    0
+                  
+                
+              
+              
+                
+                =
+                1
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}b^{m-m}&={\frac {b^{m}}{b^{m}}}\\b^{0}&=1\end{aligned}}}
+  
+
+nanpa anpa 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ li nanpa ala ala la, ni li awen lon. taso, nanpa 
+  
+    
+      
+        b
+        =
+        0
+      
+    
+    {\displaystyle b=0}
+  
+ (ante la, jan li sitelen e 
+  
+    
+      
+        
+          0
+          
+            0
+          
+        
+      
+    
+    {\displaystyle 0^{0}}
+  
+) la, ni li ike tawa pali ni.
+
+
+=== nanpa sewi li nanpa weka ===
+mi kipisi e nanpa 
+  
+    
+      
+        
+          b
+          
+            m
+          
+        
+      
+    
+    {\displaystyle b^{m}}
+  
+ tawa nanpa 
+  
+    
+      
+        
+          b
+          
+            n
+          
+        
+      
+    
+    {\displaystyle b^{n}}
+  
+ la, mi sona e ijo pini. nanpa ale weka la, mi ken ni:
+
+  
+    
+      
+        
+          
+            
+              
+                
+                  b
+                  
+                    0
+                    −
+                    m
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    
+                      b
+                      
+                        0
+                      
+                    
+                    
+                      b
+                      
+                        m
+                      
+                    
+                  
+                
+              
+            
+            
+              
+                
+                  b
+                  
+                    −
+                    m
+                  
+                
+              
+              
+                
+                =
+                
+                  
+                    1
+                    
+                      b
+                      
+                        m
+                      
+                    
+                  
+                
+              
+            
+          
+        
+      
+    
+    {\displaystyle {\begin{aligned}b^{0-m}&={\frac {b^{0}}{b^{m}}}\\b^{-m}&={\frac {1}{b^{m}}}\end{aligned}}}
+  
+
+ijo wan suli la, 
+  
+    
+      
+        
+          b
+          
+            −
+            1
+          
+        
+        =
+        
+          
+            1
+            b
+          
+        
+      
+    
+    {\displaystyle b^{-1}={\frac {1}{b}}}
+  
+.
+
+
+== pali pi anpa nanpa ==
+tenpo mute la, jan li wile sona e ni: mi jo e nanpa 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+, li jo e nanpa 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+. mi sewi e nanpa seme tawa nanpa 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ la, nanpa 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ li lon? jan li lon e pali pi anpa nanpa tawa sona ni. nasin wan la, ona li weka e pali sewi. sitelen nanpa la, mi ken sitelen e ni:
+
+  
+    
+      
+        (
+        
+          m
+          
+            n
+          
+        
+        =
+        x
+        )
+        
+        ⟹
+        
+        (
+        
+          
+            x
+            
+              n
+            
+          
+        
+        =
+        m
+        )
+      
+    
+    {\displaystyle (m^{n}=x)\implies ({\sqrt[{n}]{x}}=m)}
+  
+
+kepeken toki la: 
+
+mi sewi e nanpa 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ tawa nanpa 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ la, nanpa 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ li lon. ni la, mi anpa e nanpa 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ tawa nanpa 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ la, nanpa 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ li lon.
+
+sitelen ni la, nanpa 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ li nanpa sewi; nanpa 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ li nanpa anpa.
+
+
+=== mi wile e nanpa wan taso ===
+lon la, pali pi anpa nanpa li ken kama e nanpa mute. taso, jan li wile e nanpa wan taso la, ona li ken wile e ni: nanpa pini o nanpa nasa ala o nanpa weka ala.
+
+
+=== pali sewi kepeken nanpa kipisi ===
+pali sewi la, nanpa sewi li nanpa kipisi la, pali pi anpa nanpa li pona.
+nanpa 
+  
+    
+      
+        
+          x
+          
+            
+              1
+              n
+            
+          
+        
+      
+    
+    {\displaystyle x^{\frac {1}{n}}}
+  
+ li nanpa 
+  
+    
+      
+        
+          
+            x
+            
+              n
+            
+          
+        
+      
+    
+    {\displaystyle {\sqrt[{n}]{x}}}
+  
+ tan ni: sina sewi e nanpa 
+  
+    
+      
+        
+          
+            x
+            
+              n
+            
+          
+        
+      
+    
+    {\displaystyle {\sqrt[{n}]{x}}}
+  
+ tawa nanpa 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ la, nanpa 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ li lon. ni li pona tawa lawa nanpa tu tan open pi lipu ni.
+ni la, kepeken lawa sama la, mi ken sitelen e ni:
+
+  
+    
+      
+        
+          x
+          
+            
+              n
+              m
+            
+          
+        
+        =
+        
+          
+            (
+            
+              x
+              
+                n
+              
+            
+            )
+          
+          
+            
+              1
+              m
+            
+          
+        
+        =
+        
+          
+            
+              x
+              
+                n
+              
+            
+            
+              m
+            
+          
+        
+      
+    
+    {\displaystyle x^{\frac {n}{m}}=\left(x^{n}\right)^{\frac {1}{m}}={\sqrt[{m}]{x^{n}}}}
+  
+
+
+== leko li pona tawa ni ==
+tenpo mute la, jan li sewi e nanpa tawa tu tawa tu wan. ken la, ona li kepeken nimi ni:
+
+mi leko supa e nanpa la, mi sewi e ona tawa tu. nimi li tan ni: leko supa pona la, suli pi poka ona li suli 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ la, suli pi insa ona li suli 
+  
+    
+      
+        
+          s
+          
+            2
+          
+        
+      
+    
+    {\displaystyle s^{2}}
+  
+.
+mi leko tomo e nanpa la, mi sewi e ona tawa tu wan. nimi li tan ni: leko supa pona la, suli pi poka sinpin ona li suli 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ la, suli pi insa ona li suli 
+  
+    
+      
+        
+          s
+          
+            3
+          
+        
+      
+    
+    {\displaystyle s^{3}}
+  
+.
+ante la, jan li anpa e nanpa tawa tu tawa tu wan. nimi sama li ken lon:
+
+mi anpa leko supa e nanpa la, mi anpa e ona tawa tu.
+mi anpa leko tomo e nanpa la, mi anpa e ona tawa tu wan.
+lon la, sijelo leko pona li lon ale ma pi nasin 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ la, suli pi palisa wan ona li suli 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ la, suli pi insa ale ona pi nasin 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ li suli 
+  
+    
+      
+        
+          s
+          
+            k
+          
+        
+      
+    
+    {\displaystyle s^{k}}
+  
+.

@@ -1,0 +1,283 @@
+nasin noka pi pali nanpa li lon nasin pi pali nanpa lon sona nanpa. ona li pona tawa ni: jan li ken pali e nanpa tan nanpa ante. pali tu tu li noka nanpa wan: pali pi wan nanpa, pali pi weka nanpa, pali pi mute nanpa, en pali pi kipisi nanpa. taso, pali ante li lon. nasin ni la, jan li toki kin e pali sewi e pali mute ante.
+
+toki Inli en toki ante mute la, jan li kepeken nimi "arithmetic" tawa sona ni. nimi ni li tan nimi "ἀριθμός" (nanpa) tan toki Elina pi tenpo pini weka.
+
+
+== pali pi noka nanpa wan ==
+
+
+=== pali pi wan nanpa ===
+jan li jo e kili tu. kin la, ona li jo e kili tu wan. ale la, ona li jo e kili pi mute seme? kepeken nanpa la, jan li ken toki e ni:o wan e tu e tu wan la, luka li lon.
+  
+    
+      
+        2
+        +
+        3
+        =
+        5
+      
+    
+    {\displaystyle 2+3=5}
+  
+ni li pali pi wan nanpa. ni li wan e nanpa tu anu nanpa mute li pana e nanpa wan suli tan ona ale.
+
+
+=== pali pi weka nanpa ===
+kili luka li lon. jan li weka e kili tu wan tan ni. ni la, kili pi mute seme li lon? kepeken nanpa la, jan li ken toki e ni:tan luka la, o weka e tu wan la, tu li lon.
+  
+    
+      
+        5
+        −
+        3
+        =
+        2
+      
+    
+    {\displaystyle 5-3=2}
+  
+ni li pali pi weka nanpa.
+
+
+=== pali pi mute nanpa ===
+jan li jo e poki kili luka. poki ale li jo e kili tu tu li sama. ale la, ona li jo e kili pi mute seme? kepeken nanpa la, jan li ken toki e ni:o mute e luka tawa tu tu la, mute li lon.
+  
+    
+      
+        5
+        ×
+        4
+        =
+        20
+      
+    
+    {\displaystyle 5\times 4=20}
+  
+
+ni li pali pi mute nanpa. ni li wan e nanpa tu anu nanpa mute li pana e nanpa wan pi suli a tan ona ale.
+ante la, pali mute li sama pali wan lon sike. mi wan e tu tu e tu tu e tu tu e tu tu e tu tu la, mi kama jo e mute. mute kulupu pi ijo tu tu li luka.
+
+
+=== pali pi kipisi nanpa ===
+jan li jo e poki kili tu tu. ona li jo e kili mute. ona li wile pana e kili pi mute sama tawa poki ale la, ona o pana e kili pi mute seme tawa poki wan? kepeken nanpa la, mi ken toki e ni:o kipisi e mute tawa tu tu la, luka li lon.
+  
+    
+      
+        20
+        ÷
+        4
+        =
+        5
+      
+    
+    {\displaystyle 20\div 4=5}
+  
+ni li pali pi kipisi nanpa. ona li ante tawa pali mute sama ni: pali wan en pali weka li ante.
+mi kipisi e nanpa tawa ala la ni li ken ala. mi kipisi e ala tawa nanpa ali la mi kama jo e ala. mi kipisi e ala tawa ala la ni kin li ken ala.
+pali kipisi li sama pali weka lon sike. mi kipisi e mute tawa tu tu la mi ni: mi open lon mute. mi weka e tu tu lon sike. pini la mi kama jo e nanpa ala. pali kipisi li sama ni: mute seme la mi weka e tu tu?
+
+lon kulupu pi nanpa lon la pali kipisi li kama e nanpa tu: ona li kama e nanpa pi mute kulupu e nanpa awen. mi kipisi e mute wan tawa tu tu la mi kama jo e kulupu luka e awen wan. mi kipisi e nanpa #1 tawa nanpa #2 la ni li lon: nanpa #2 la nanpa awen li lili. toki open la, jan li jo e kili mute tu wan la, mi ken toki e ni kepeken nanpa:o kipisi e mute tu wan tawa tu tu la, luka li lon. taso, tu wan li awen.
+  
+    
+      
+        23
+        ÷
+        4
+        =
+        5
+         
+        
+          R
+        
+        3
+      
+    
+    {\displaystyle 23\div 4=5\ {\text{R}}3}
+  
+
+lon kulupu pi nanpa kipisi la pali kipisi li kama e nanpa wan. kepeken toki sama la:o kipisi e mute tu wan tawa tu tu la, mute tu wan pi kipisi tu tu li lon. 
+  
+    
+      
+        23
+        ÷
+        4
+        =
+        
+          
+            23
+            4
+          
+        
+      
+    
+    {\displaystyle 23\div 4={\frac {23}{4}}}
+  
+
+ante la: luka en tu wan pi kipisi tu tu li lon.
+  
+    
+      
+        23
+        ÷
+        4
+        =
+        5
+        
+          
+            3
+            4
+          
+        
+      
+    
+    {\displaystyle 23\div 4=5{\frac {3}{4}}}
+  
+
+ante la: luka ala mute mute mute luka luka luka li lon. (nimi pi toki pona li tan nasin ni)
+  
+    
+      
+        23
+        ÷
+        4
+        =
+        5.75
+      
+    
+    {\displaystyle 23\div 4=5.75}
+  
+
+
+== nanpa lon en nanpa weka ==
+
+jan li sona e nanpa lon e nanpa weka la, jan li ken kepeken e nasin ante. nasin ni en nasin noka li ante mute ala. o awen sona e ni:
+
+  
+    
+      
+        5
+      
+    
+    {\displaystyle 5}
+  
+ li nanpa lon li lon luka anu luka taso.
+
+  
+    
+      
+        −
+        5
+      
+    
+    {\displaystyle -5}
+  
+ li nanpa weka li weka luka.
+
+
+=== "li lon" anu "li weka" ===
+jan li pali nanpa la, nanpa kama (=) li nanpa lon anu nanpa weka.
+nanpa kama li nanpa lon la, jan li ken kepeken e toki ni:
+
+  
+    
+      
+        .
+        .
+        .
+        =
+        +
+        x
+      
+    
+    {\displaystyle ...=+x}
+  
+   (pali nanpa) la, (nanpa kama) li lon.
+nanpa kama li nanpa weka la, jan li ken kepeken e toki ni:
+
+  
+    
+      
+        .
+        .
+        .
+        =
+        −
+        x
+      
+    
+    {\displaystyle ...=-x}
+  
+   (pali nanpa) la, (nanpa kama) li weka.
+kin la, sina wile ala kepeken e toki "li lon" anu toki "li weka" la, sina ken kepeken e toki ni:
+
+  
+    
+      
+        .
+        .
+        .
+        =
+        +
+        x
+      
+    
+    {\displaystyle ...=+x}
+  
+   (pali nanpa) la, lon (nanpa kama) li kama.
+
+  
+    
+      
+        .
+        .
+        .
+        =
+        −
+        x
+      
+    
+    {\displaystyle ...=-x}
+  
+   (pali nanpa) la, weka (nanpa kama) li kama.
+
+
+=== o toki ala e pali pi weka nanpa ===
+jan li sona e nanpa lon e nanpa weka la, ona li ken pali pi weka nanpa li toki ala e pali pi weka nanpa kepeken nasin ni: ona li ken toki e pali pi wan nanpa taso, sama ni:
+
+  
+    
+      
+        a
+        −
+        b
+        =
+        n
+      
+    
+    {\displaystyle a-b=n}
+  
+o wan e a e weka b la, n li kama.
+pali mute lon wan:
+
+  
+    
+      
+        −
+        a
+        +
+        b
+        +
+        c
+        −
+        d
+        =
+        n
+      
+    
+    {\displaystyle -a+b+c-d=n}
+  
+o wan e weka a e b e c e weka d la, n li kama.anu:
+o wan e weka a e lon b e lon c e weka d la, lon n li kama.
+nanpa lon la, jan li ken kepeken e nimi "lon" anu ala.

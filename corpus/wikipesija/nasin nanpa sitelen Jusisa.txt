@@ -1,0 +1,14 @@
+nasin Jusisa (toki Inli la: Under-ConScript Unicode Registry, UCSUR /ˈjusisər/) li nasin namako pi nasin Juniko. ona li nasin sin pi nasin Sisa (toki Inli la: ConScript Unicode Registry, CSUR).
+nasin Juniko la, sitelen wan li jo e nanpa wan. taso, nanpa ni li lon: kulupu Juniko li pana ala e sitelen tawa ona, tan ni: jan ante li ken pana e sitelen ante tawa ona. nanpa ni li kulupu nanpa PUA (toki Inli la: Private Use Area, "jan li kepeken ni la jan lawa li lawa ala e nasin ona"). jan Son Kowan (John Cowan) en jan Mako Eweson (Michael Everson) li pana e sitelen mute tawa kulupu nanpa PUA, li nasin e ona. nasin ona li nasin Sisa.
+nasin Sisa la, nasin sitelen sin pali mute li lon.
+jan tu ni li pini nasin e sitelen lon tenpo sike nanpa 2008 tan ni: pali suli ante li lon la tenpo li lili. jan Wepeka Kapijela Petenko (toki Inli la: Rebecca Gabriella Bettencourt, toki pona la: jan Lepeka) li suli e nasin Sisa li pali e nasin Jusisa.
+nasin Jusisa li kama jo e nasin sitelen ante mute. wan la, sitelen pona. kepeken nasin Jusisa la, jan li ken kepeken sitelen pona lon ilo nanpa.
+nasin sitelen ilo lili li ken pana e lukin pi nasin Jusisa. nasin Fairfax en nasin Nisiki Teki (toki Nipon la: にしき的) li tu ona.
+
+
+== nanpa ==
+nasin Jusisa li kepeken nanpa ni: ona li open lon nanpa E000 li pini lon nanpa F1C3F.
+sitelen pona li lon nasin Jusisa. ona li open lon nanpa F1900 li pini lon nanpa F19FF. kipisi lili pi sitelen pona (toki Inli la: "Sitelen Pona Radicals") kin li lon, li open lon nanpa F1C80 li pini lon nanpa F1C9F.
+
+
+== tan sona ==

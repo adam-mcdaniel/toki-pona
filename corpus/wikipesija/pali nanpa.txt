@@ -1,0 +1,227 @@
+pali nanpa li tan kulupu 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ tawa kulupu 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ la, ijo ale pi kulupu 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ li jo e ijo wan pi kulupu 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+. kulupu 
+  
+    
+      
+        X
+      
+    
+    {\displaystyle X}
+  
+ li kulupu open; kulupu 
+  
+    
+      
+        Y
+      
+    
+    {\displaystyle Y}
+  
+ li kulupu pini.
+open la, jan li kepeken pali nanpa tawa sona pi kipisi lili(?).  ijo wan li kama ante lon ijo ante la, ni li pali nanpa. tenpo pini la, jan li toki mute e pali nanpa pi tawa pona(?). taso, tenpo ni la, jan li pona e nasin ona kepeken sona pi kulupu ijo(?). ni la, jan li kepeken pali nanpa tawa ijo mute.
+
+jan li kepeken sitelen kalama(?) tawa nimi pi pali nanpa, sama 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+, anu 
+  
+    
+      
+        g
+      
+    
+    {\displaystyle g}
+  
+, anu 
+  
+    
+      
+        h
+      
+    
+    {\displaystyle h}
+  
+. ijo 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ li ijo open li lon kulupu open la, 
+  
+    
+      
+        f
+        
+          (
+          x
+          )
+        
+      
+    
+    {\displaystyle f\left(x\right)}
+  
+ li ijo lon kulupu pini li ijo pini tan pali 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ tan ijo 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+. mute la, jan li lon e pali nanpa kepeken toki nanpa(?), sama ni: 
+  
+    
+      
+        f
+        
+          (
+          x
+          )
+        
+        =
+        
+          x
+          
+            2
+          
+        
+        +
+        1
+      
+    
+    {\displaystyle f\left(x\right)=x^{2}+1}
+  
+. ni la, jan li pali 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ la, ona li ante e nimi 
+  
+    
+      
+        x
+      
+    
+    {\displaystyle x}
+  
+ tawa nanpa open ona. kepeken pali 
+  
+    
+      
+        f
+      
+    
+    {\displaystyle f}
+  
+ sama la:
+  
+    
+      
+        f
+        
+          (
+          x
+          )
+        
+        =
+        
+          x
+          
+            2
+          
+        
+        +
+        1
+      
+    
+    {\displaystyle f\left(x\right)=x^{2}+1}
+  
+ la, 
+  
+    
+      
+        f
+        
+          (
+          4
+          )
+        
+        =
+        
+          4
+          
+            2
+          
+        
+        +
+        1
+        =
+        17
+      
+    
+    {\displaystyle f\left(4\right)=4^{2}+1=17}
+  
+.pali nanpa li suli tawa nasin sona tawa sona ilo(?) tawa sona nanpa. jan li toki e ni: pali nanpa li "ijo pi suli nanpa wan tawa wile sona jan" lon kulupu mute pi sona nanpa.
+
+
+== tan sona ==

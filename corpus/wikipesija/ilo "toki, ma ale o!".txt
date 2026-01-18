@@ -1,0 +1,69 @@
+ilo "toki, ma ale o!" (toki Inli la: Hello, world!) li ilo. ona li toki e ni: "toki, ma ale o!" anu toki sama ni. jan li kama sona e toki ilo la, ona li kama sona e ilo ni.
+
+
+== toki ilo ==
+
+
+=== toki ilo Paton ===
+toki ilo Paton la:
+
+print("toki, ma ale o!")
+
+
+=== toki ilo Pijepi ===
+toki ilo Pijepi(?) la:
+
+<?php
+$a="toki, ma ale o!";
+echo $a;
+?>
+
+
+=== toki ilo Sawesi ===
+toki ilo Sawesi la:
+
+console.log("toki, ma ale o!");
+
+
+=== toki ilo Si ===
+toki ilo Si la:
+
+#include <stdio.h>
+
+int main(void) {
+    puts("toki, ma ale o!");
+    return 0;
+}
+
+
+=== toki ilo Sipupu ===
+toki ilo Sipupu la:
+
+#include <iostream>
+
+int main()
+{
+    std::cout << "toki, ma ale o!\n";
+}
+
+
+=== toki ilo Posu ===
+toki ilo Posu(?) la:
+
+." toki, ma ale o!" CR
+
+
+=== toki ilo pi insa musi Manka ===
+toki ilo pi musi Manka la:
+
+/say toki, ma ale o!
+anu
+/title @a toki, ma ale o!
+
+
+=== toki ilo Wasi ===
+toki ilo Wasi la:
+
+fn main(){
+    println!("toki, ma ale o!")
+}

@@ -1,0 +1,16 @@
+nasin pi soweli sama jan pi pini ala li pana e sona ni: soweli sama jan li luka pi nasin ala e ilo pi pana sitelen kepeken tenpo pi pini ala la ona li sama ken ale pana e sitelen ale lon sitelen pi jan Wilijan Sepija.
+
+lon nasin ni la, sama ken ale li ijo pi sona nanpa, soweli sama jan li soweli sama jan lon ala, li ilo pana pi sitelen pi nasin ala. nasin ni li pana e sona ni: nanpa pi suli mute mute pi pini ken li nanpa pi pini ala ala. soweli sama jan li ken pana e sitelen ale tan jan Wilijan Sepija lon ilo pi pana sitelen li ken pi lili mute mute, taso ni li ken ala ala.
+
+
+== ken e nasin ni ==
+ilo wan pi pana sitelen li jo e nena mute mute luka luka la, jan li wile pana e nimi "banana" la, ken pana pi nimi "banana" lon tenpo wan taso li:
+
+(1/50)×(1/50)×(1/50)×(1/50)×(1/50)×(1/50) =(1/50)6
+
+ken ni li lili mute mute mute mute, kin la, ken pana lon tenpo nanpa tu li (1/50)6. 
+ni la, ken pi pana ala lon tenpo pi mute n li ni:
+
+Xn = 1-(1/506)n
+nanpa n li kama suli la, nanpa pi pana ala (Xn) li kama lili. mi mute li jo e soweli sama jan luka luka ale  ale  ale  ale  ale[nnp] la, ken pi pana ala li kipisi ala luka luka luka tu[nnp] lon kipisi sama ale.
+jan wan li pana pi nasin ala li wile pana e nimi "toki pona", ken pi pana ala li 1-1/268 li kipisi 99.99999999952 tan kipisi sama ale. taso jan luka luka li lon la, ken pi pana pi pana ala li kipisi 99.99999999521 tan kipisi sama ale.

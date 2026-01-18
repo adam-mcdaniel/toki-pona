@@ -1,0 +1,19 @@
+sona pi alasa lon li sona lon sona nasin lon sona nanpa.
+
+
+== sona sama pi sona nanpa ==
+
+
+=== sona sama pona ===
+sona sama pona la, mute pi nanpa awen li 2. ona li "lon ala" ("0", "false") li "lon" ("1", "true"). mute pi pali nanpa pi ijo open wan li 4 - 2 = 2. ona li "awen" li "ala". mute pi pali nanpa pi ijo open tu li 16 - 2 ("0" en "1") - 4 (A "awen" en B "awen en A "ala" en B "ala") = 10. ona li:
+
+"en"
+"anu"
+"en ala"
+"anu ala"
+"sama"
+"sama ala"
+"la" anu "toki"
+"en ... ala" (A "en" B "ala")
+"tan"
+"ala en"

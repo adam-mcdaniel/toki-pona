@@ -1,0 +1,238 @@
+nasin nanpa poki anu nasin nanpa lon li nasin nanpa pi jan mute lon ma ni. nasin nanpa ni li jo e sitelen wan nanpa lon poki nanpa. nanpa pi poki nanpa li pana e sona ni: nanpa lon poki nanpa la, ni li mute seme? 
+sike nanpa li ijo pi nasin nanpa poki.
+
+sike nanpa pi nanpa 2 (toki Inli la: binary, base-2) la, sitelen ante tu li sitelen wan nanpa. tenpo mute la, ni li 0 li 1.
+sike nanpa pi nanpa 10 (toki Inli la: decimal, base-10) la, sitelen ante luka luka li sitelen wan nanpa. tenpo mute la, ni li ni: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
+sike nanpa pi nanpa 16 (toki Inli la: hexadecimal, base-16) la, sitelen ante luka luka luka wan li sitelen wan nanpa. tenpo mute la, ni li ni: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.
+jan li wile sitelen e nanpa kepeken nasin ni la, ona o kepeken e sitelen nanpa lon nasin ni taso.
+jan li wile nanpa kepeken nasin nanpa poki kepeken sike nanpa pi nanpa 10 la:
+
+  
+    
+      
+        [
+        0
+        ]
+        [
+        0
+        ]
+        [
+        0
+        ]
+      
+    
+    {\displaystyle [0][0][0]}
+  
+ open la, ona o jo e poki nanpa. ona li ken jo e mute ale pi wile ona. nasin lon anpa la, o jo e poki tu wan anu mute sewi. lon poki ale la, o pana e sitelen "0".
+
+  
+    
+      
+        [
+        0
+        ]
+        [
+        0
+        ]
+        [
+        1
+        ]
+      
+    
+    {\displaystyle [0][0][1]}
+  
+ ona li wile open nanpa la, o ante e poki nanpa 0 (kulupu nanpa wan) tawa sitelen "1".
+
+  
+    
+      
+        [
+        0
+        ]
+        [
+        0
+        ]
+        [
+        2
+        ]
+      
+    
+    {\displaystyle [0][0][2]}
+  
+ ni li pini la, o ante e poki nanpa 0 tawa sitelen "2".
+
+  
+    
+      
+        [
+        0
+        ]
+        [
+        0
+        ]
+        [
+        3
+        ]
+      
+    
+    {\displaystyle [0][0][3]}
+  
+ ni li pini la, o ante e poki nanpa 0 tawa sitelen "3".
+
+  
+    
+      
+        [
+        0
+        ]
+        [
+        0
+        ]
+        [
+        .
+        .
+        .
+        ]
+      
+    
+    {\displaystyle [0][0][...]}
+  
+ o awen pali ni kepeken sitelen nanpa Alapi.
+
+  
+    
+      
+        [
+        0
+        ]
+        [
+        0
+        ]
+        [
+        9
+        ]
+      
+    
+    {\displaystyle [0][0][9]}
+  
+ jan li ante e poki nanpa 0 tawa sitelen "9" la, o pini pali ni.
+
+  
+    
+      
+        [
+        0
+        ]
+        [
+        1
+        ]
+        [
+        0
+        ]
+      
+    
+    {\displaystyle [0][1][0]}
+  
+ ni li pini la, o ante e poki nanpa 1 (kulupu nanpa mute) tawa sitelen "1", o ante e poki nanpa 0 tawa sitelen "0" sin.
+
+  
+    
+      
+        [
+        0
+        ]
+        [
+        1
+        ]
+        [
+        1
+        ]
+      
+    
+    {\displaystyle [0][1][1]}
+  
+ ni li pini la, o ante e poki nanpa 0 tawa sitelen "1".
+
+  
+    
+      
+        [
+        0
+        ]
+        [
+        .
+        .
+        .
+        ]
+        [
+        .
+        .
+        .
+        ]
+      
+    
+    {\displaystyle [0][...][...]}
+  
+ o awen pali pi ni ale.
+
+  
+    
+      
+        [
+        0
+        ]
+        [
+        9
+        ]
+        [
+        9
+        ]
+      
+    
+    {\displaystyle [0][9][9]}
+  
+ poki nanpa 1 li sitelen "9" la, poki nanpa 0 li sitelen "9" la, o pini pali ni.
+
+  
+    
+      
+        [
+        1
+        ]
+        [
+        0
+        ]
+        [
+        0
+        ]
+      
+    
+    {\displaystyle [1][0][0]}
+  
+ ni li pini la, o ante e poki nanpa 2 (kulupu nanpa ali) tawa sitelen "1", o ante e poki nanpa 1 e poki nanpa 0 tawa sitelen "0" sin.
+
+  
+    
+      
+        [
+        .
+        .
+        .
+        ]
+        [
+        .
+        .
+        .
+        ]
+        [
+        .
+        .
+        .
+        ]
+      
+    
+    {\displaystyle [...][...][...]}
+  
+ o awen pali pi sama ni.
+toki lon sewi pi toki ni la, ni li nasin noka pi sitelen nanpa kepeken sike nanpa pi nanpa 10 kepeken sitelen nanpa Alapi. taso, jan mute li sitelen ala e poki li sitelen insa e poki.
+kin, poki li jo e sitelen "0" la, poki ale pi poka open ona li jo e sitelen "0" kin la, jan mute li sitelen ala e sitelen ni, sama ni: ona li wile ala sitelen e "00340" li wile sitelen e "340" taso.

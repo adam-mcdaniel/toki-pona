@@ -1,0 +1,11 @@
+toki ilo Wasi(toki Inli: Rust) li toki ilo. jan pi toki ilo li ken pali e ilo mute kepeken toki ilo Wasi.
+
+ni li sitelen "toki, ma ale o!" kepeken toki ilo Wasi.
+
+fn main(){
+    println!("toki, ma ale o!")
+}
+
+
+== lipu ante ==
+lipu pi toki ilo Wasi: https://www.rust-lang.org/

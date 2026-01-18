@@ -1,0 +1,6 @@
+toki ilo Ake (toki Inli: Haskell) li toki ilo pi ilo sona. nimi pi toki ilo ni li kama tan jan Ake Kawi (toki Inli: Haskell Curry).
+sitelen anpa li toki “ma ale o, toki!” kepeken toki ilo Ake.
+
+main :: IO ()
+main = do
+  print "ma ale o, toki!"

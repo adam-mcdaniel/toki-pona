@@ -1,0 +1,50 @@
+nasin ma li nasin tawa lon ma. kepeken nasin ni la, jan ale lon ma li ken lukin e nasin tawa sama.
+kulupu nanpa wan pi nasin ma li jo e nasin tu tu:
+
+nasin pi soweli lete (N)
+nasin pi open suno (E)
+nasin pi waso lete (S)
+nasin pi pini suno (W)
+kulupu insa pi nasin ma li jo e nasin tu tu:
+
+nasin insa pi soweli lete pi open suno (NE)
+nasin insa pi waso lete pi open suno (WE)
+nasin insa pi waso lete pi pini suno (SW)
+nasin insa pi soweli lete pi pini suno (NW)
+kulupu insa pi nasin insa ma li jo e nasin luka tu wan:
+
+nasin insa pi soweli lete pi soweli lete pi open suno (NNE)
+nasin insa pi open suno pi soweli lete pi open suno (ENE)
+nasin insa pi open suno pi waso lete pi open suno (ESE)
+nasin insa pi waso lete pi waso lete pi open suno (SSE)
+nasin insa pi waso lete pi waso lete pi pini suno (SSW)
+nasin insa pi pini suno pi waso lete pi pini suno (WSW)
+nasin insa pi pini suno pi soweli lete pi pini suno (WNW)
+nasin insa pi soweli lete pi soweli lete pi pini suno (NNW)
+
+
+== nimi lon toki ante ==
+
+
+=== nasin pi soweli lete ===
+Norda (toki Epelanto)
+North (toki Inli)
+北 / 北 (toki Sonko)
+
+
+=== nasin pi open suno ===
+Oriente (toki Epelanto)
+East (toki Inli)
+东 / 東 (toki Sonko)
+
+
+=== nasin pi waso lete ===
+Sude (toki Epelanto)
+South (toki Inli)
+南 / 南 (toki Sonko)
+
+
+=== nasin pi pini suno ===
+Okcidente (toki Epelanto)
+West (toki Inli)
+西 / 西 (toki Sonko)

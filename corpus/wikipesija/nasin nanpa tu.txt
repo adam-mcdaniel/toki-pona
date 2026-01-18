@@ -1,0 +1,32 @@
+nasin nanpa tu li nasin pi sitelen nanpa. lon ijo mute la nasin nanpa tu li sama tawa nasin nanpa Alapi.
+nasin nanpa tu li pali lon nanpa tu (2). sama ala la, nasin nanpa Alapi li pali lon nanpa luka luka (10).
+
+
+== sitelen nanpa ==
+
+tenpo mute la, nasin nanpa tu li kepeken e sitelen tan nasin nanpa Alapi. taso, nasin nanpa tu li wile e sitelen tu taso. tan ni la, jan li ken kepeken e sike anu palisa anu sitelen ale tawa sitelen.
+
+
+== lon ma pi tenpo ni ==
+
+lon insa la, ilo wawa ale li kepeken e nasin nanpa tu tan ni: wawa li ken lon anu lon ala taso. tenpo pini la jan li wile lawa e ilo wawa la, ona li wile sona e nasin nanpa tu. tenpo ni la jan li wile lawa e ilo lawa la, ona li wile ala sona.
+
+
+== pali nanpa ==
+
+lon nasin nanpa tu la, nanpa lili li ken suli. taso, jan li ken nanpa kepeken pali lili.
+tawa pali nanpa poka la, jan li wile sona e ijo tu tu taso:
+
+0 + 0 = 0
+0 + 1 = 1
+1 + 0 = 1
+1 + 1 = 10
+    1 1 0 0    = 12
++ 1 1 0 1 1    = 27
+------------
+  1        
+  1 0 1 1 1
+------------
+1 0 0 1 1 1    = 39
+
+nasin sama li lon tawa pali nanpa ante.

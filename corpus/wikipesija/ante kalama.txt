@@ -1,0 +1,9 @@
+kalama la, ante kalama li toki e ni: kalama li ante seme lon tenpo? ni li sama ni: jan li luka mute e nena li awen luka ni lon ilo kama supa pi nena walo pimeja la, kalama li kama lon tenpo lili. ni la, kalama ni li kama weka. 
+tenpo mute la, ante kalama li toki e suli kalama. taso ona li ken toki e mute pali pi mute tenpo e sewi kalama. 
+
+tenpo mute la, jan li sona e mute pi ante kalama kepeken nasin pi mute ADSR (mute Esijesa) anu mute tu tu pi ante kalama. ADSR li nimi lili tan nimi "Attack" tan nimi "Decay" tan nimi "Sustain" tan nimi "Release". ni ale li toki e ni:
+
+ante open kalama (Attack) li toki e tenpo. tenpo li open lon kama sewi kalama tan kalama ala. tenpo li pini lon sewi nanpa wan pi sewi kalama ni.
+ante weka kalama (Decay) li toki e tenpo. tenpo li open lon kama anpa kalama tan sewi nanpa wan pi sewi kalama ni. tenpo li pini lon tenpo ni: sewi kalama li kama awen.
+ante awen kalama (Sustain) li toki e tenpo. tenpo li open lon tenpo open pi awen kalama. tenpo li pini lon tenpo pini pi awen kalama.
+ante pini kalama (Release) li toki e tenpo. tenpo li open lon kama anpa kalama tan pini pi awen kalama. tenpo li pini lon kalama ala.

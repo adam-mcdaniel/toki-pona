@@ -1,0 +1,23 @@
+wan lili awen li wan lili. ona li lili mute a: sina lukin tan poka wan tawa poka ante la, suli pi linja jan(?) li wan ale ale ale pi wan lili awen. ijo ale li tan wan lili ni. lipu ni la, mi kepeken nimi lili "wan awen".
+wan lili awen li jo e kule insa. kule insa ni li tan wan insa ona.
+
+
+== nimi ==
+toki Inli la, jan li kepeken nimi "atom". ni li tan nimi ἄτομος ("ijo ni: ala li ken kipisi e ona") tan toki Elina pi tenpo pini. 
+tenpo mute la, wan lili awen li awen wan. taso, insa ona li suli la, ona li ken kama tu. ni li pana e wawa pi mute a.
+
+
+== insa ==
+insa la, wan lili awen li jo e insa awen. ale pi wan lili li suli luka luka ale pi insa awen. insa awen la, kule tu pi wan insa li lon:
+
+wan insa pi wawa lon li jo e kule wawa sewi[kipisi "lipu li ala" o weka]. wan ilo noka pi kule wawa sewi(?) la, wawa ona li +1.
+lipu ni la, mi kepeken nimi lili "wan insa lon".
+wan insa pi wawa ala(?) li jo ala e kule wawa sewi. taso, ona li pona e awen pi insa awen.
+lipu ni la, mi kepeken nimi lili "wan insa awen".
+nanpa pi wan insa lon li pana e kule insa tawa wan lili awen. nanpa pi wan insa awen li pana e kule suli(?) tawa wan lili awen. sona pi nasin ijo la, kule insa li suli mute. taso, kule suli li ken ante e seli ijo.
+selo la, wan insa pi wawa weka(?) li lon. ona li sike lon weka pi insa awen. wan ilo noka pi kule wawa sewi(?) la, wawa ona li -1. lipu ni la, mi kepeken nimi lili "wan insa wawa" tawa ona.
+wan awen li jo ala e suli pi wawa sewi la, nanpa pi wan insa lon en nanpa pi wan insa wawa li sama. nanpa pi wan insa wawa li ante la, wan lili awen li jo e kule wawa sewi. ni la, ona li wan lili pi kule wawa(?).
+
+
+== kama wan ==
+wan ni mute li kama wan la, ni li wan lili tomo. telo pona la, wan lili tomo ona li jo e wan awen 3. wan awen tu li kule nanpa 1. wan awen wan li kule nanpa 8.

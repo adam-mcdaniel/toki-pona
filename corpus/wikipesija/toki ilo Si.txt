@@ -1,0 +1,11 @@
+toki ilo Si li toki ilo. toki Inli la, nimi ona li "C" (kalama /si/). ona li kepeken tenpo lili. mama ona li jan Teni Wisi (Dennis Ritchie) jan ni li pali e toki ilo ni lon tenpo sike 1970.
+toki ilo Sipupu li suli e toki ilo Si. taso, ona li ken kepeken tenpo suli.
+
+"toki, ma ale o!" kepeken toki ilo Si:
+
+#include <stdio.h>
+
+int main(void) {
+    puts("toki, ma ale o!");
+    return 0;
+}

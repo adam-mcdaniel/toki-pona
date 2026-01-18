@@ -1,0 +1,45 @@
+sike nanpa pi nanpa 10 anu sike nanpa pi nanpa luka luka li nasin nanpa li kule pi sike nanpa li kule pi nasin nanpa poki. nasin ni la, sitelen luka luka pi sitelen wan nanpa li lon. sitelen nanpa Alapi la, ni li ni: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9.
+
+
+== kipisi nanpa ==
+sike nanpa pi nanpa 10 la, jan li ken sitelen e kipisi nanpa li kepeken ala e pali pi kisipi nanpa. ni la, ona li kepeken ala e sitelen " / " anu sitelen " – " anu sitelen " ÷ " anu sitelen " : ".
+ona li wile pana e kipisi nanpa tawa mute ijo la:
+
+o jo e nanpa pi mute ijo.
+lon poka pini pi nanpa ni la, o pana e sitelen pi pini toki ( . ) anu sitelen pi awen toki ( , ).
+poka pini pi sitelen ni li poki nanpa. ona o jo e mute ni pi wile ona. ona li ken sitelen insa e poki nanpa ni.
+lon poka pini pi sitelen toki la:
+nanpa lon insa poki nanpa wan l, nanpa li sama 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ la, poki nanpa wan li sama ⁠a/10⁠.
+nanpa lon insa poki nanpa tu la, nanpa li sama 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ la, poki nanpa tu li sama ⁠b/100⁠.
+nanpa lon insa poki nanpa tu wan la, nanpa li sama 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ la, poki nanpa tu wan li sama ⁠c/1000⁠.
+nanpa lon insa poki nanpa ante la, poki nanpa ni li sama kin.
+kepeken poki la, ni li sama ni:
+
+kepeken nanpa π la:

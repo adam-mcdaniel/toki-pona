@@ -1,0 +1,39 @@
+nanpa pi sewi pini ala li nimi pi suli kulupu.
+suli kulupu li nanpa pi pini ala la suli ona li nanpa pi sewi pini ala.
+jan Kantola li toki e ni:
+"anu la kulupu ale pi pini ala li jo e suli sama?"
+jan Kantola li kama sona e ni: "ala! suli pi kulupu ni li ken ante!"
+ona li nimi e nanpa sin ona: nanpa Alepa weka, nanpa Alepa wan, nanpa Alepa tu, ... li sitelen: 
+  
+    
+      
+        
+          ℵ
+          
+            0
+          
+        
+        ,
+        
+          ℵ
+          
+            1
+          
+        
+        ,
+        
+          ℵ
+          
+            2
+          
+        
+        ,
+        .
+        .
+        .
+      
+    
+    {\displaystyle \aleph _{0},\aleph _{1},\aleph _{2},...}
+  
+
+en -

@@ -1,0 +1,93 @@
+sona selo pi poka tu wan li sona lon sona pi sitelen ma lon sona nanpa. sona ni la, jan li lukin e selo pi poka tu wan, li wile sona e ni: pini poka li suli ni la, poka li sama suli tawa nanpa seme?
+
+
+== selo pi pini poka leko ==
+selo pi poka tu wan li jo e pini poka leko la, ona li pona a tawa sona ni. sina sona e suli pi pini poka la, sina ken sona e sama suli pi poka ale.
+o lukin e sitelen lon poka. pini poka wan la, mi kepeken nimi 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+. ni la, poka o kama nimi:
+
+poka suli li suli nanpa wan tawa poka ale li pini lon pini poka 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+.
+poka noka li pini lon pini poka 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+ li poka suli ala.
+poka weka li pini lon pini poka leko li pini ala lon pini poka 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+.
+poka nimi ni la, mi ken toki e sama tu wan kepeken suli pi pini poka 
+  
+    
+      
+        α
+      
+    
+    {\displaystyle \alpha }
+  
+.
+
+sama weka suli (sitelen pi sona nanpa la: 
+  
+    
+      
+        sin
+        ⁡
+        α
+      
+    
+    {\displaystyle \sin \alpha }
+  
+) li ni: poka weka li suli pi nanpa seme tawa poka suli?
+sama noka suli (sitelen pi sona nanpa la: 
+  
+    
+      
+        cos
+        ⁡
+        α
+      
+    
+    {\displaystyle \cos \alpha }
+  
+) li ni: poka noka li suli pi nanpa seme tawa poka suli?
+sama weka noka (sitelen pi sona nanpa la: 
+  
+    
+      
+        tan
+        ⁡
+        α
+      
+    
+    {\displaystyle \tan \alpha }
+  
+) li ni: poka weka li suli pi nanpa seme tawa poka noka?

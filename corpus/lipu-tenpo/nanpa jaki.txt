@@ -1,0 +1,473 @@
+
+
+--- PAGE 1 ---
+
+```
+lipu tenpo
+
+> nanpa jaki
+```
+
+--- PAGE 2 ---
+
+```markdown
+# jan pali
+
+jan Alonola + kije Enki + jan Imi
++ jan Kasape + jan Ke Tami + jan Lapate
++ jan Nalu + jan Penta + jan Polo + jan Tesu
+li toki.
+
+jan Alonola + jan Kasape + jan Ke Tami
+li alasa e pakala toki.
+
+jan Alonola + jan Ke Tami li sitelen.
+
+jan Simo li sitelen e sitelen sinpin.
+
+jan Kasape li sijelo e lipu.
+
+jan Alonola + jan Sonatan li lawa e kulupu.
+
+## pilin
+3
+nasin Sijon
+li nasin sewi Juta ala a!
+
+4
+musi Og
+en nimi pi mute lili
+
+## sona
+6
+sitelen nasa
+lon nasin Juniko
+
+7
+kulupu Kanse la
+jan meli li kama ken
+
+8
+jaki sijelo ni
+li moli nanpa wan
+
+10
+toki Lasina
+li pona tan seme?
+
+## musi
+11
+ma nasa –
+tenpo open
+
+12
+pini weka
+
+13
+tawa o tawa
+
+14
+wan taso la
+musi lili
+jaki anu pona
+
+15
+seme li mi
+kijetesantakalu o
+
+> o kama pona
+lon lipu tenpo!
+mi wile e ni: lipu
+tenpo ni li kama tawa
+sina la ona li jaki ala.
+
+taso ijo mute li ken
+jaki. utala li ken pali
+e jaki. jaki lili lon
+insa sijelo li ken jaki
+e sina kin.
+
+ante la lipu ni
+li toki e toki ante
+mute e sitelen kin.
+toki li jaki ala li pona
+tawa mi mute.
+
+ni la o kama sona
+e ijo ale o musi
+kepeken lipu tenpo!
+```
+
+--- PAGE 3 ---
+
+```markdown
+# nasin Sijon li nasin sewi Juta ala!
+
+> tan jan Polo
+
+> mi sitelen e lipu lili ni: mi wile toki e ijo suli tawa kulupu. ijo suli li ni: nasin Sijon en nasin sewi Juta li ante mute. tan ni la jan li ken toki e ni: kulupu lawa pi ma Isale li ike mute. taso nasin sewi Juta li ike ala! lon la ma Isale li ike tawa jan mute kin pi nasin sewi Juta. pilin mi la jan lawa Netanjaku pi ma Isale li ike mute. tenpo ni la jan mute pi ma Isale li moli la jan mute mute pi ma Pilasin li moli a. jan lili mute kin pi ma Pilasin li moli.
+
+jan Netanjaku en jan poka ona li pali e ni. ona li toki e ni: mi pakala e ma Kasa tawa ni: “mi wile weka e kulupu utala Kamasi”. lon la ona li pakala li moli e jan mute pi ike ala e jan lili mute mute. jan lili pi ma Pilasin en kulupu utala Kamasi li sama ala. jan Netanjaku li sona ala. ona li nasa. kin la ona li pakala ala e utala monsuta. ona li pakala e jan pi ike ala li lon e jan mute pi utala monsuta pi tenpo kama.
+
+mi pilin e ni: jan Netanjaku o tawa tomo awen pi jan ike. mi pilin e ni kin: lon la ona li jan pi nasin sewi Juta ala tan ni: ona li sona ala e toki lawa pi nasin sewi Juta (pi nasin sewi Jesu kin). toki lawa nanpa luka wan li toki e ni: o moli ala e jan!
+
+pilin mi la ma Isale o weka. ma sin o kama lon. ma sin ni la jan pi ma Pilasin en jan pi nasin Juta o awen lon poka sama. ona o sama! ona o kama jo e ijo sama. sama ma Pesije la ma pi kulupu tu li ken, la ma pi jan Juta pi jan Isilan li ken kin. mi awen lon ma Malasija. ma ni la jan pi nasin sewi Isilan en jan pi nasin sewi Puta en jan pi nasin sewi Palata en jan pi nasin sewi Jesu li awen lon poka sama. ona li utala ala a! mi wile e ni: utala pi ma Kasa li kama pini. ike la ma Elopa en ma Mewika li pali pi lili ike tawa ni. toki li mute, taso pali li lili. lon la ma Mewika li awen pana e ilo moli mute tawa ma Isale a! ni li ike mute tawa mi. tenpo ale la tan li lon ala tawa moli jan a!
+```
+
+--- PAGE 4 ---
+
+```markdown
+# musi Og en nimi pi mute lili
+
+**tan jan Nalu**
+
+> tenpo open pi toki pona la, ona li toki pi lili nanpa wan – ona taso li lon...
+> ...anu seme?
+
+jan pi mute lili li sona e ni: lon la, ijo toki musi pi lili mute li lon; tenpo open pi toki pona la, ona li tan tenpo pini. ona li toki lon ala, taso ona li sama lili toki.
+
+sike suno nanpa 1995 la jan Ato Kijosi (Aldo Ghiozzi) li pana e musi Og. ona li seme? lon la, nimi ni li kalama sama “mu”, tan ni: musi Og la sina wile toki, taso sina sona ala e nimi mute. sina weka e nimi la, sina o ken luka anu mu!
+
+lon musi ni la, sina pali sama jan pi tenpo pini pi weka mute (ona li jan lon ala, li musi taso; pu ala la, sina ken nimi ni e ona: jan kana¹). taso, jan ni li sama ala jan lon pi tenpo pini weka, li musi taso: ona li lon poka pi akesi monsuta² li pali e ijo musi mute li nasa mute.
+
+jan pi musi Og li sona ala e ijo suli mute pi tenpo mi li sona e ijo lili pi tenpo pini taso. suli la, ona li ken ala toki suli li sona ala e nimi mute. ona la toki pona li toki suli a!
+
+jan Ke Tami
+
+musi Og la, jan li ken toki kepeken nimi pi mute lili a – ona li sona e nimi ni taso:
+
+mi – sina – seli – lape – lupa-kiwen³ – tawa – kiwen – kasi – jo-e-linja-selo⁴ – jaki – lili – moku – ijo – telo – pakala – suli – suno
+
+sina wile toki tawa jan ante la sina o kepeken nimi ni taso! sina ken ala pana e sona pona kepeken nimi ni la, sina o kepeken e tawa luka kin e lukin pi sinpin sina; anu la sina ken alasa sitelen kepeken nimi ala anu sina ken mu.
+
+ken la, sina wile moku la, sina wile e ni: sina en jan pona sina li alasa e soweli. ni la, sina wile toki e ni tawa jan pona sina:
+
+«mi tu o tawa ma pi kasi suli o alasa e soweli pi palisa lawa o moku e ona. mi tu o utala e ona kepeken palisa kiwen: ona li moli la, mi tu o ken tawa e ona tawa tomo kiwen mi, li ken seli e ona li ken moku e ona!»
+```
+
+--- PAGE 5 ---
+
+```
+taso, sina ken ala toki sama ni: sina sona ala e nimi! ni la, sina o alasa toki kepeken nimi pi mute lili taso, kepeken luka sina kin.
+
+sina ken toki sama ni:
+
+**mi sina tawa kasi pakala ijo moku!**
+> [wile la, sina o pana e luka sina tawa ma kasi; sina o pana e luka lon lawa sina sama palisa lawa; sina o mu sama soweli pi palisa lawa]
+
+**kasi kiwen pakala ijo!**
+> [wile la, sina o tawa e luka sina sama ni: sina utala e ijo kepeken palisa suli]
+
+**mi sina tawa ijo lupa! seli ijo! moku ijo!**
+> [wile la, sina o pana e luka sina tawa tomo kiwen, o tawa e palisa luka sama seli, o pana e ona tawa uta sina]
+
+ni ali li pilin nasa musi mute, a a! kin la, sina musi ni kepeken nimi pi toki pona la ni li ike suli ala, tan ni: toki Inli en toki suli ante la nimi wan li jo e kon lili, toki pona la nimi wan li jo e kon suli. ni la, nimi pi nanpa lili kin li ken wawa a.
+```
+
+--- PAGE 6 ---
+
+```markdown
+# sitelen nasa lon nasin Juniko¹
+
+tan kije Enki
+jan Alonola
+
+> nasin Juniko li open lon tenpo sike nanpa 1991 (nasin nanpa pona la #LLLTTAMMMMLLLW). nasin 1.0.0 la ona li jo e sitelen 7129 (MMMLLWAMLTT) taso. tenpo li kama la, jan pali pi nasin Juniko li awen pana e sitelen sin. nasin 15.1 li nasin sin la ona li jo e sitelen 149 813 (LLTTAMMMMLLLTWALLTW) a! mute anu seme? lipu ni la, mi toki e sitelen pi nasa mute lon nasin Juniko a.
+
+## sitelen O pi oko mute
+tomo sewi pi nasin Jesu la, ma li lon kulupu toki Lojanki li kepeken e toki Lojanki². sitelen ni li lukin sama oko luka luka. ona li lon nasin Juniko tan ni taso: ona li lon lipu majuna³ a, jan li kepeken e ona lon tenpo wan taso. nasin kepeken ona li lon nimi tu ni: “серафими многоочитий” (serafimi mnogoočitii). toki pona la, nimi ni li “jan sewi sewi pi ☺ ko mute⁴”. linja ilo mute la sitelen ni li jo e oko luka tu taso. taso ni li tan pakala pi nasin Juniko.
+
+sitelen O oko ante li lon kin, taso ona li musi ala. ona li jo e oko wan taso anu oko tu taso.
+
+## moku linja Pijanpijanmijen
+toki Sonko la moku linja ni (😼😼😼) li e sitelen Kansi pi linja mute. sitelen ni li ken jo e nasin sitelen ante, taso ona ale li pimeja a. sina ken lukin e sitelen pi moku ni lon ni a! sitelen ni li jo e linja 58 (MMMLLTW; lon toki Sonko pi linja mute) anu linja 42 (MMT; lon toki Sonko pi linja lili).
+
+## ijo Tawito anu ijo Ototo
+toki Nijon la sitelen pi toki Sonko li lon kin. sitelen ni li jo e nasin sitelen tu: nasin nanpa wan la, nimi “ko sewi” (☺) li lon sewi pi nimi “akesi suli” (🐉). nasin toki ona li “たいと” (taito). nasin ante la, nimi “ko sewi” li lon sewi li lon poka a pi nimi “akesi suli”. nasin toki ona li “だいと” (daito) anu “おとど” (otodo). jan mute li toki e ni: nanpa linja la sitelen ni li suli nanpa wan.
+
+## nasin sitelen tawa pkoi pini suli walo tan sewi
+sitelen 😊 li musi ala. taso nimi ona li musi. toki Inli la, nimi ona li PRESENTATION FORM FOR VERTICAL RIGHT WHITE LENTICULAR BRAKET. nimi pini lon nimi ni li pakala: ona o “bracket” o “brakcet” ala.
+```
+
+--- PAGE 7 ---
+
+```
+sitelen pi kon moli
+tenpo pini la, ma Nijon li jo e nasin nanpa ante. nasin ni li JIS X 0208. ona li jo e sitelen pi toki Nijon e sitelen pi toki ante. taso sitelen 12 (LLT) lon nasin nanpa ni li nasa tan ijo wan sama: jan ala li sona e tan ona. toki Nijon la ona li “幽霊文字” (yūrei moji, “sitelen pi kon moli”). sitelen ale pi kon moli li ni: 堪, 赧; 弑; 弑; 斈; 梟; 蟠; 赭; 閘; 駘.
+
+leko lon poka pi linja alasa anpa pini la, mi wile pana e sitelen wan ante tawa sina: sitelen 𝙳 (RIGHT ANGLE WITH DOWNWARDS ZIGZAG ARROW, anu
+
+> “angzarr”) li... jan ala li sona a! sina ken kepeken e ni lon nasin wile sina. ni la, mi pali e nimi sin tawa nimi ni: lekanpa!
+
+---
+
+kulupu Kanse la jan meli li kama ken
+
+tan jan Kasape
+
+> jan li kama unpa li kama jo insa e jan pi lili a li wile ona ala la seme li ken · kulupu mute la jan ni li moli e jo ona la kulupu li wile pali e pali ike tawa ona · taso kulupu Kanse li sin e wile ona · jan li wile moli e jo ona la kulupu li ken e ni lon ali li pali ala e pali ike tawa ona tan ni · kulupu li kama toki e ni · jan mute li kama pilin pona tan ni · kulupu lili Kanse la jan pi wawa ali li toki e ni: lon kulupu suli kin la jan jo o ken pali e pali sama lon ali.
+```
+
+--- PAGE 8 ---
+
+```markdown
+# jaki sijelo ni li moli nanpa wan
+
+> o pilin. ijo lili li tawa insa pi sijelo sina. ni li lon tenpo ale a. taso sijelo sina li ken utala e ona li ken weka pona e ona. ona li kama ken ala ni la ni li ken kama ike. ijo lili li ken ike e sijelo sina li ken pakala e insa sijelo li ken moli e sina. sina sona e ni.
+
+taso ijo jaki tu li ike sama ala jaki ante. ona tu li moli e jan pi mute suli a. ona nanpa wan li sin lon tenpo sike poka li tawa ma ale. sina sona e ona. sina len e uta sina tan ona. ona li ike suli tan seme – mi utala e ona la utala li awen anpa e ike ona, li wile e tenpo.
+
+taso jaki nanpa tu li sin ala. sin ala aaa. ona li tan tenpo weka. lipu en sitelen toki li kama ijo sin la ona li sin ala. ale tenpo la jaki ni li moli wawa nanpa wan. utala ale li moli pi wawa ni ala lon ale tenpo.
+
+ijo pi jaki ike ni li lon sijelo la ona li wile kama mute. ijo li mute lon sijelo la ni li ike – sijelo li wile utala e ijo jaki la ni li seli ike e sijelo e ijo sijelo li pakala e ijo sijelo li moli e ijo sijelo – kin la, ijo jaki li moku e moku pi ijo sijelo la ijo sijelo li ken ala moku li moli. suli la, jaki ni li mute lon poki insa kon. ona li ken lon ijo sijelo ante, taso ona li lon poki
+
+jaki ni li ken nasa tenpo. ijo ike li kama lon sijelo la ijo li ken jaki e sijelo lon tenpo poka, li ken jaki lon tenpo sike kama mute. ijo ike li jo e selo pi ko awen la sijelo li ken ala utala pona e ona. tan ni la, sijelo li pana e lipu walo tawa ijo ike. lipu walo li mute la lipu li ken kama poki kiwen tawa ijo ike li awen e ijo lon insa. poki ni li kiwen pi nimi Tupeku la nimi pi ijo ike en nimi jaki li Tupekulosi. ijo ike ale li awen lon poki la sijelo li kama ala jaki.
+
+nasa tenpo ante la, selo ko pi ijo ike li wile e tenpo. ijo jaki ni pi selo ko li wile kama mute la ona li sama ala ijo jaki ante. jaki ante la jan poka li kama jaki lon tenpo poka la jan alasa li ken sona pona e nasin pi tawa jaki. taso jaki ni pi nasa tenpo la jan alasa en jan poka li ken ala sona pona sama.
+```
+
+--- PAGE 9 ---
+
+```
+a, ni ale li ike. jan mute li moli tan ona.
+kulupu li ken ala utala e jaki la jaki li mama pi ike suli. a. taso kulupu li ken a utala. jan sona li sona pali e moku nasa pi weka jaki. jan alasa li sona oko e sijelo jaki kepeken ilo oko. jan pi sijelo jaki li wile weka e jaki tan sijelo. taso ilo oko pona en moku nasa pona li lon ala ma pi sijelo jaki. sijelo jaki li lon ala ma pi ilo pona li lon ala ma pi moku nasa. kulupu li ken utala e jaki lon ma ale, li utala ala e jaki lon ma ale. utala ala ni la, ike suli li tan ala jaki, li tan kulupu, li tan mi ale a. mi ken weka e jaki ni pi moli nanpa wan a. taso ni li ken pali suli la mi ni ala. mi o ni.
+
+seme li ken?
+moku pi lili ike en jaki ante en ilo oko ala en moku nasa ala li suli wawa a e ken moli. jaki moli li suli lon ma pi moku lili, lon ma pi jaki ante, lon ma pi ilo oko ala, lon ma pi moku nasa ala. mi wile ante e ona ale a. taso mute moku en weka pi jaki ante li wile e tenpo e ijo mute. ilo en moku nasa li wile e ijo wan taso – mani. jaki moli li lon ma pi mani lili. mani la, ijo tu li suli. nanpa wan la, mani o tawa ma pi jaki ike. kin la, mi wile e ijo pi wawa sin la mani o tawa sona ilo. jaki li lon ala ma pi mani la ma mani li pali ala e ilo sin. nanpa tu la mani ilo en mani pi moku nasa o kama lili. a, mani li ken a kama lili. o sona –
+
+kulupu esun Tanake (Danaher) li lawa e ilo oko sin li wile e mani lon ona. ilo oko pi tenpo ante li ken ala sona e lon jaki lon tenpo ale. taso ilo sin li wawa li ken sona pona li ken sona e ni kin: moku seme pi weka jaki li ken pona wawa lon jaki pi nasin
+
+jan Ke Tami
+```
+
+--- PAGE 10 ---
+
+```markdown
+# toki Lasina li pona tan seme?
+
+## tan jan Imi
+
+> **tenpo pini lili la**, mi open kama sona e toki Lasina. ni la, jan mute li wile sona e ni: sina kama sona e toki ni tan seme? toki Lasina li moli! ni li lon. taso toki Lasina li awen pona tawa jan ale. ni li tan seme? lipu ni la, mi wile toki e ni.
+
+ken suli la, sina sona e ni:
+jan li toki e toki Lasina lon tenpo pini suli. taso ken la, sina sona ala e ni: jan li pini ala kepeken toki Lasina. jan li sitelen kepeken ona lon tenpo pi suli mute! ni la, sina kama sona e toki Lasina la, sina ken lukin e lipu pi tenpo ante mute. ken suli la, sina kama sona e toki Lasina la, sina kama pilin e ni: sina jan pi tenpo pini! ni li lon kin: sina sitelen kepeken toki Lasina lon tenpo ni la, jan pi tenpo kama suli li ken lukin e ona tan ni: toki Lasina li ante ala! (taso la, nimi sin li lon toki Lasina. sina ken toki e ijo sin kepeken toki Lasina. kin la, jan tonsi li ken toki e tonsi ona kepeken toki Lasina.)
+
+ijo pona li ni: sina kama sona e toki Lasina la, ona li wawa e sona sina. ni li tan ni: toki Lasina li suli mute li wile e lawa wawa. ni la
+
+jan li sitelen kepeken ona lon tenpo suli. ni la, lipu mute li kepeken toki Lasina. kin la, jan li sona pona e nasin pi kama sona pi toki Lasina. ni la, ona li ken pana e sona kepeken nasin pona! tan nanpa tu la, toki Lasina li jo ala e ma. ni la, ma ala li ken toki e ni: toki ni li toki mi! taso la, sina wile kama sona e toki Lasina la, ni li wile e tenpo mute. kin la, toki Lasina li pona tawa jan pi ma Elopa. ken la, ni li lon ala tawa jan pi ma ante. taso la, toki ala pi ma ale li pona ale.
+
+pini la, toki Lasina li pona mute tan ijo mute. ona li pona mute tawa mi. ken la, sina kama sona e ona la, sina kama sona e ni: ona li pona mute tawa sina kin! sina kama sona e toki Lasina la, sina ken kama sona e ijo mute. ken la, sina kama wile sona e toki ante pi sin ala!
+
+> Valete, amici et amicae! (o tawa pona, jan pona o)
+```
+
+--- PAGE 11 ---
+
+```markdown
+# ma nasa – tenpo open
+
+## tan jan Alonola
+
+### tenpo telo
+> tenpo pini mute la, telo taso li lon. jan sewi telo li lawa e telo suli ni. taso telo taso li ike la, jan sewi telo li pali e kala, e kasi. kala suli li lon, li lon selo telo la, monsi ona li lon telo ala. monsi ona la, kala ma en kasi ma li lon. jan sewi telo li lukin e monsi, li pilin ike tan ni: monsi pi kala suli li lon telo ala. telo ala la, ona li ken ala lawa. jan sewi telo li kalama li pakala, li tu: jan sewi telo en jan sewi ma.
+
+### tenpo ma
+ni li tenpo open pi tenpo ma. jan sewi ma li lukin e monsi pi kala suli la, ona li pilin pona. ona li suli e kala, li kiwen e kala. kala kiwen li kala ala, li ma. ma la, jan sewi ma li pali e akesi, e soweli, e pipi, e kasi sin.
+
+### tenpo sewi
+jan sewi telo li pilin ike tan jan sewi ma. jan sewi telo li wile e ni: telo li lon ma. ni la, ona li pali e kon telo. kon telo li lon sewi, li tawa anpa lon tenpo mute. ni li pona tawa jan sewi telo. taso ni li ike ala tawa jan sewi ma tan ni: telo tan sewi li pona tawa kasi ma.
+
+### tenpo ike
+tenpo mute la, jan sewi tu li utala ala, li pona. taso tenpo wan la, jan sewi ike li kama. jan sewi ike ni li ken ante e seli, e suno. ona li weka e suno, li lete e telo, li seli e ma. ni la, moli mute li lon. ni la, jan sewi pona tu li kulupu, li utala e jan sewi ike. taso jan sewi ike li lili ala, li jo e wawa mute.
+
+jan sewi pona tu taso li ken ala weka e jan sewi ike. ni la, jan sewi pona tu li pali e jan sewi lili sin mute. jan sewi pona ale li poki e jan sewi ike, li tu e ona. taso ona li ken ala weka e jan sewi ike. ona li poki taso. ni la, tenpo pimeja en tenpo suno li lon; tenpo seli en tenpo lete li lon; ma seli en ma lete li lon.
+
+### tenpo jan
+jan sewi lili li kama mute. tenpo ni la, ona li sewi ala, li sewi lili taso. ona li lon ma, lon telo, lon sewi, li ante mute. tenpo ni la, jan ni li jan taso. jan ni li pali e tomo, e ilo, e kasi. tenpo ni la, pona en ike li lon poka ona.
+```
+
+--- PAGE 12 ---
+
+```markdown
+jan Jakomo Lopate¹ li jan pi toki musi li jan pi nasin lawa kin tan ma Italia. pali ona la, sona pi jan ali la, toki musi ni li suli.
+
+jan Jakomo li tan ma tomo lili; lon poka ona la nena li lon. tenpo mute la, jan Jakomo li wile weka e pilin ike ona la ona li tawa sewi nena li awen lon ni.
+
+---
+
+# pini weka
+
+tenpo ali la mi olin e nena ni e sinpin kasi ni: tan nasin mute la ona li len e lukin tawa weka.
+taso mi anpa la mi oko insa ijo ali ni lon monsi sinpin: e ma pi pini ala, e pona suli, e kalama ala sewi; a, mi pilin monsuta lili kin. mi kute e kalama pi tawa kon lon kasi la mi sama e kalama ala ni e kalama kasi: mi lukin insa e tenpo ali suli e tenpo pini moli e tenpo ni lon e kalama ona. ni la lawa mi li insa e telo pi suli ni sewi: telo ni li anpa e mi la ni li suwi.
+
+---
+```
+
+--- PAGE 13 ---
+
+```markdown
+# Tawa o Tawa
+
+**tan jan Penta**
+
+> mi pakala taso •
+
+mi wile moli •
+ijo ike li jaki e lawa mi •
+ni li pona •
+
+mi wile ala lon •
+seme? •
+
+sina sona •
+pakala taso li mi •
+
+sina ni tan seme? •
+mi ni tan ale •
+ale li ike, a •
+
+o pini e powe sina •
+
+mi ken ala •
+mi toki e lon taso, e lon ike •
+
+taso ona li ike seme? •
+
+a •
+mi suli ala lon sina •
+sina wile e sona sin taso •
+
+tan seme la mi o wile e sona ala? •
+
+a •
+mi toki ala e ni!
+sona taso li ken •
+taso sona o lili lon toki ni pi mi tu •
+
+o ni tan seme? •
+
+ona li tan ni: mi wile e pona kama ala!
+mi wile toki taso e ike •
+
+mi la ni li pona •
+
+mi pona tan ni •
+taso mi pakala tan ijo ante •
+
+mi sona •
+
+---
+
+mi wile ala lon •
+sina toki ike tan seme? •
+ni li pona mute •
+
+sina toki ike tan seme? •
+
+a!
+sona li weka la ni li nasin ken taso •
+sina pana ala e suli •
+ni la mi o pilin pona tawa sina •
+kepeken seme? •
+
+a!
+taso mi ken ala •
+mi ken ala lukin e ona •
+
+sina pilin monsuta la •
+mi tu li ken lukin lon tenpo sama •
+
+aaaa!
+pona!
+sina wile sona anu seme? •
+mi o pana! •
+mi pona ala lon tomo sona mi •
+mi jo ala e jan pona lon tomo sona •
+mi ike tawa jan pi pana sona •
+mi sona ala e ijo sin ale •
+kulupu mama mi li weka tan mi •
+soweli mi li weka tan mi •
+tomo ni la mi wan taso •
+tomo ni la mi pona ala •
+ni la apeja li mi •
+apeja li mi!
+a!
+jan li olin pakala e mi, li pakala e mi •
+```
+
+--- PAGE 14 ---
+
+```
+# wan taso la
+tan jan Lapate
+
+wan taso¹
+wan taso la, mi toki insa e suli; ma weka la, mi nanpa e tawa noka mi;
+mi wile ala oko e sitelen ante noka. pilin pona li weka; lon sinpin mi la,
+jan ale li ken lukin e seli insa mi.
+mi la, len ante ala li lon: mi o weka, o wan taso a!
+tenpo ni la, nena suli en telo tawa en ma pimeja pi kasi suli li sona e lon mi, e lon len mi.
+taso nasin weka ale la, olin li alasa e mi, li toki tawa mi; kin la,
+mi toki tawa olin a!
+
+---
+# musi lili
+tan jan Tesu
+
+1. sama toki ni pi jan Petaka: *Solo e pensoso*
+
+```
+(Visual crossword clues are omitted as per instructions)
+
+---
+# jaki anu pona
+tan jan Alonola
+
+mi wile esun e len noka
+taso mi jo ala e mani a
+mi tawa esun pi sin ala
+alasa esun o open a
+
+len ni li lukin pona tawa mi
+taso lupa li lon, ni li jaki
+len ante li laso pimeja, pona!
+taso soweli lili li lon insa
+
+len ni li jaki, len ante kin
+taso mi oko e len sin
+len li jaki ala tawa mi
+mi kama jo e len ni
+```
+
+--- PAGE 15 ---
+
+```markdown
+# seme li mi
+
+tan jan Alonola
+
+> jan ale li lon insa mi lon tenpo kama anu pini mi jo e sinpin e lupa
+> jan sona li pali lon insa mi la jan li kama sona mi la jan li pana sona
+> sona nanpa en sona toki sona pilin en sona kasi
+> ken la sona li sona jaki ken la mi ike tawa jan lili
+> ken la nasin mi li nasa taso mi wile pana e sona
+
+---
+## kijetesantakalu o
+
+tan jan Ke Tami
+
+---
+### musi linja
+
+1. PÖNA > O
+2. 4?
+```
+
+--- PAGE 16 ---
+
+```
+sina wile pali tawa lipu tenpo la o tawa lipu liputenpo.org · lon ona la sina ken tawa ma mi · jan pali li toki lon ona · sina kama lon kulupu la ni li pona a
+
+sina wile pana anu ante e ijo pi lipu ni la o lon nasin · nimi nasin li lon poka pi ijo ni la o lon ona · tawa ijo ali ante pi lipu ni la o lon nasin CC BY-SA 4.0
+```

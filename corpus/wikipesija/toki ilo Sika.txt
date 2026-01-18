@@ -1,0 +1,14 @@
+toki ilo Sika (toki Inli la: Zig) li toki ilo. ona li lukin pona e toki ilo Si. ona en toki ilo Si li ken toki kepeken nasin toki wan.
+"toki, ma ale o!" kepeken toki ilo Sika:
+
+const std = @import("std");
+
+pub fn main() !void {
+    const stdout = std.io.getStdOut().writer();
+    try stdout.print("Hello, {s}!\n", .{"World"});
+}
+
+
+== lipu ante ==
+lipu pi toki ilo Sika: https://ziglang.org/
+lipu nasin pi toki ilo Sika: https://ziglang.org/documentation/

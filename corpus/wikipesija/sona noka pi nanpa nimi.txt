@@ -1,0 +1,314 @@
+sona noka pi nanpa nimi li lon sona pi nanpa nimi. lipu ni la, mi toki e ijo noka tawa ona. mute la, jan lili li kama sona e ni lon tomo sona. sona ni en sona pi pali nanpa li ante tan ni: pali nanpa la, jan li sona e nanpa ale. nanpa li jo e nimi la, jan li sona ala e nanpa ale.
+
+
+== sitelen ==
+sitelen pi toki nanpa(?) la, jan li ken sitelen e toki nanpa. kin la, nasin ona li pana e nimi mute tawa wan mute lon sitelen ni. mi toki e toki nanpa 
+  
+    
+      
+        3
+        
+          x
+          
+            2
+          
+        
+        −
+        2
+        x
+        y
+        +
+        c
+      
+    
+    {\displaystyle 3x^{2}-2xy+c}
+  
+ la, ona li jo e wan ni:
+
+o sona e ni:
+
+mute awen li nanpa awen li mute e nanpa nimi.
+sitelen ni la, nimi li kulupu ijo li ken jo e mute awen e nanpa nimi e suli sewi. toki nanpa la, jan li wan e nimi li weka e nimi.
+sitelen kalama(?) li nimi e nanpa awen e nanpa pi awen ala.
+
+
+== ijo noka ==
+
+
+=== nanpa nimi ===
+sona ni li suli e nasin pi pali nanpa tan ni: ona li pana e nanpa nimi tawa ona. lawa li lon pali nanpa la, lawa sama li lon pali pi nanpa nimi. ni li pona tan ijo mute:
+
+nanpa nimi li ken toki e nanpa pi sona ala. mi ken toki e ni: suli seli 
+  
+    
+      
+        C
+      
+    
+    {\displaystyle C}
+  
+ pi suno ni li suli tawa suli seli 
+  
+    
+      
+        P
+      
+    
+    {\displaystyle P}
+  
+ pi suno pini lon nanpa 
+  
+    
+      
+        20
+      
+    
+    {\displaystyle 20}
+  
+ la, mi ken toki e ni kepeken toki nanpa: 
+  
+    
+      
+        C
+        =
+        P
+        +
+        20
+      
+    
+    {\displaystyle C=P+20}
+  
+.
+nanpa nimi li ken toki e nasin pona tawa ijo mute, li toki ala e suli lon pi nanpa sona. mi ken toki e ni: tenpo Minu 5 la, 
+  
+    
+      
+        60
+        ×
+        5
+        =
+        300
+      
+    
+    {\displaystyle 60\times 5=300}
+  
+ la, ni li sama tenpo Sekon 300. taso, mi kepeken nanpa nimi la, mi ken toki e ni: nanpa pi tenpo Minu li nanpa 
+  
+    
+      
+        m
+      
+    
+    {\displaystyle m}
+  
+ la, nanpa pi tenpo Sekon li 
+  
+    
+      
+        s
+      
+    
+    {\displaystyle s}
+  
+ la, 
+  
+    
+      
+        s
+        =
+        60
+        m
+      
+    
+    {\displaystyle s=60m}
+  
+.
+suli ijo li ken ante mute la, nanpa nimi li ken toki e linja lon ona. mi ken toki e ni: sike supa la, suli selo 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ ona en suli 
+  
+    
+      
+        d
+      
+    
+    {\displaystyle d}
+  
+ pi palisa insa suli ona la, 
+  
+    
+      
+        π
+        =
+        
+          
+            c
+            d
+          
+        
+      
+    
+    {\displaystyle \pi ={\frac {c}{d}}}
+  
+. (nanpa 
+  
+    
+      
+        π
+      
+    
+    {\displaystyle \pi }
+  
+ li nanpa sike).
+nanpa nimi la, jan li ken toki e sona noka lon lon sona nanpa. mi ken toki e ni: pali pi wan nanpa la, ante ma la, nanpa pini li sama(?). toki nanpa la, mi sitelen e ni: 
+  
+    
+      
+        a
+        +
+        b
+        =
+        b
+        +
+        a
+      
+    
+    {\displaystyle a+b=b+a}
+  
+.
+
+
+=== jan li ken lili e toki nanpa ===
+jan li ken lili e toki nanpa kepeken lawa pi pali nanpa.
+
+
+=== toki pi sama nanpa ===
+toki pi sama nanpa la, jan li toki e ni: toki wan nanpa en toki ante nanpa li sama. sitelen la, 
+  
+    
+      
+        
+          (toki wan)
+        
+        =
+        
+          (toki ante)
+        
+      
+    
+    {\displaystyle {\text{(toki wan)}}={\text{(toki ante)}}}
+  
+. insa pi toki tu la, sitelen sama ("=") li lon. 
+sitelen sama li sama nimi "sama" pi sitelen pona. open la, sitelen ni li tawa toki pi sama nanpa. jan mute li sona e kon ona la, mama Sonja li kepeken ona lon sitelen pona tawa nimi "sama".
+jan mute li sona e toki ni pi sama nanpa. ona li sona pali pi jan Putakola li toki e suli poka lon nena supa leko:
+
+  
+    
+      
+        
+          c
+          
+            2
+          
+        
+        =
+        
+          a
+          
+            2
+          
+        
+        +
+        
+          b
+          
+            2
+          
+        
+      
+    
+    {\displaystyle c^{2}=a^{2}+b^{2}}
+  
+
+toki ni pi sama nanpa la, mi toki e ni:
+
+suli 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ li suli pi poka suli. mi leko supa e suli 
+  
+    
+      
+        c
+      
+    
+    {\displaystyle c}
+  
+ la, suli 
+  
+    
+      
+        
+          c
+          
+            2
+          
+        
+      
+    
+    {\displaystyle c^{2}}
+  
+ li lon. suli pi poka lili tu li suli 
+  
+    
+      
+        a
+      
+    
+    {\displaystyle a}
+  
+ li suli 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+. mi leko supa e suli pi poka lili tu li wan e ona tu la, suli ni li sama suli 
+  
+    
+      
+        
+          c
+          
+            2
+          
+        
+      
+    
+    {\displaystyle c^{2}}
+  
+
+toki pi sama nanpa la, mi toki e sama pi ijo tu. ken la, ona li lon suli ale pi nanpa nimi ale. ken la, ona li ni ala. ona li ni ala la, sina ken alasa e nanpa ni: sina ante e nanpa nimi tawa ona la, toki pi sama nanpa li lon. nasin ni li alasa pona pi sama nanpa.
+
+
+=== ante pi nanpa nimi ===
+jan li ken ante e nanpa nimi tawa ijo ante. ken la, ni li toki nanpa. ken la, ni li nanpa taso.
+
+
+== tan sona ==

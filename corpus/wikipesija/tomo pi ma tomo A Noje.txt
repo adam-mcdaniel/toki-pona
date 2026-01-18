@@ -1,0 +1,19 @@
+tomo pi ma tomo A Noje (Tower of Hanoi) li ijo pi wile sona lon sona nanpa tan epiku wan.
+
+palisa tu wan li lon li palisa E li palisa I li palisa A, sike pi mute N (N li suli la wan lili) li lon, suli sike li lon nasin ni: suli li lon anpa, lili li lon anpa. jan o tawa e ona mute tawa sike A lon nasin ni:
+
+tenpo wan la tawa wan pi sike wan li ken lon.
+sike suli li ken ala lon sewi pi sike lili.
+ijo pi wile sona: nasin tawa seme li ken? lili nanpa wan la tenpo tawa pi mute seme li lon?
+
+
+== tan ==
+jan Ewa Lika pi ma Kanse li pali e ona li toki e ni: ma tomo A Noje pi ma Wije la tomo wan pi nasin sewi li lon li jo e palisa tu wan e sike 64, jan insa li tawa e sike ni kepeken nasin sewi. musi ni li pini la, ale li kama moli.
+lon la jan insa li wile pini e musi ni la o kepeken tawa 264-1, tenpo Sekon wan li tawa wan la, tenpo sike 584,900,000,000 la musi ni li pini, taso ale li jo e tenpo sike 13,700,000,000 taso.
+
+
+== nasin pini pi musi ni ==
+mute tawa pi lili nanpa wan li kepeken nasin ni:
+
+2n-1
+kon pi nimi n lo mute sike.
