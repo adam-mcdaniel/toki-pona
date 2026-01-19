@@ -1,0 +1,66 @@
+.visualizer-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.text-display {
+    font-size: 1.25rem;
+    line-height: 2;
+    font-family: var(--font-body);
+    color: var(--text-primary);
+}
+
+.utterance-block {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.utterance-label {
+    font-family: var(--font-heading);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    font-weight: bold;
+    user-select: none;
+}
+
+.token {
+    padding: 0.1rem 0.3rem;
+    margin: 0 0.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-block;
+}
+.token:hover {
+    background-color: var(--bg-secondary);
+    box-shadow: 0 0 0 1px var(--accent-primary);
+}
+
+.constituent {
+    display: inline;
+}
+
+/* POS Colors - Text View */
+.pos-noun { color: var(--pos-noun); font-weight: 500; }
+.pos-verb { color: var(--pos-verb); font-weight: 500; }
+.pos-modifier { color: var(--pos-modifier); }
+.pos-particle { color: var(--pos-particle); }
+.pos-preposition { color: var(--pos-preposition); }
+.pos-pronoun { color: var(--pos-pronoun); font-weight: 500; }
+.pos-other { color: var(--pos-other); }
+.pos-preverb { color: var(--pos-preverb); }
+
+
+/* Tree styling overrides */
+.rd3t-link {
+    stroke: var(--border-color) !important;
+}
+
+text {
+    font-family: var(--font-body);
+    fill: var(--text-primary) !important;
+    font-weight: 500;
+}

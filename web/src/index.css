@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700&display=swap");
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --accent-primary: #6366f1; /* Indigo 500 */
+  --accent-secondary: #818cf8; /* Indigo 400 */
+  --border-color: #e2e8f0;
+
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Outfit", sans-serif;
+
+  /* POS Colors (Adjusted for light bg contrast) */
+  --pos-noun: #2563eb; /* Blue 600 */
+  --pos-verb: #db2777; /* Pink 600 */
+  --pos-modifier: #ca8a04; /* Yellow 600 */
+  --pos-particle: #64748b; /* Slate 500 */
+  --pos-preposition: #059669; /* Emerald 600 */
+  --pos-pronoun: #9333ea; /* Purple 600 */
+  --pos-other: #475569; /* Slate 600 */
+  --pos-preverb: #e11d48; /* Rose 600 */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  /* Removed max-width and padding to allow full viewport application */
+}
+
+button {
+  font-family: var(--font-heading);
+}
+
+* {
+  box-sizing: border-box;
+}

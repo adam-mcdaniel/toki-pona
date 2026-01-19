@@ -1,0 +1,129 @@
+<utterance>         ::= <sentence-block> | <interjection> | <vocative-command>
+
+/* -------------------------------------------------------------------------- */
+/* 1. Sentence Structure                                                      */
+/* Reference: "more info on sentence structure"                               */
+/* Formula: [(A|<prep> A|<sentence>) la]* B [en C]* {li [<preverb>]* D ...}+  */
+/* -------------------------------------------------------------------------- */
+
+<sentence-block>    ::= { <context> "la" } <main-clause>
+
+<context>           ::= <sentence-block> 
+                      | <prepositional-phrase> 
+                      | <phrase>
+
+<main-clause>       ::= <subject-simple-p1> <predicate-unmarked> 
+                      | <subject-general> <predicate-marked>
+
+/* -------------------------------------------------------------------------- */
+/* 2. Subjects                                                                */
+/* Reference: "sentence structure" & "the particle en"                        */
+/* -------------------------------------------------------------------------- */
+
+/* Special Rule: 'li' is dropped ONLY if subject is exactly 'mi' or 'sina' */
+<subject-simple-p1> ::= "mi" | "sina"
+
+/* General Rule: All other subjects (including compound mi/sina) take 'li' */
+<subject-general>   ::= <phrase> { <conjunction-subject> <phrase> }
+
+<conjunction-subject> ::= "en" | "anu"
+
+/* -------------------------------------------------------------------------- */
+/* 3. Predicates                                                              */
+/* Reference: "the particle li", "the particle o", "how to use preverbs"      */
+/* -------------------------------------------------------------------------- */
+
+<predicate-unmarked>::= <predicate-core> 
+                      /* Note: Text says multiple predicates with mi/sina require new sentences */
+
+<predicate-marked>  ::= <predicate-marker> <predicate-core> { <predicate-marker> <predicate-core> }
+
+<predicate-marker>  ::= "li" | "o"
+
+<predicate-core>    ::= { <preverb-phrase> } <head-predicate> { <direct-object> } { <prepositional-phrase> }
+
+<head-predicate>    ::= <phrase> 
+                      | <prepositional-phrase> /* "X li <prep> Y" construction */
+
+<preverb-phrase>    ::= <preverb> [ "ala" ]
+
+<direct-object>     ::= "e" <phrase>
+
+/* -------------------------------------------------------------------------- */
+/* 4. Phrases & Modifiers                                                     */
+/* Reference: "phrases", "the particle pi", "ordinals"                        */
+/* -------------------------------------------------------------------------- */
+
+<phrase>            ::= <word> { <modifier> }
+
+<modifier>          ::= <word>
+                      | <particle-pi> <phrase>
+                      | <particle-anu> <phrase>
+                      | <pseudo-nanpa> <number>
+                      | <modifier-special>
+                      | <proper-noun>
+
+<particle-pi>       ::= "pi"
+<particle-anu>      ::= "anu"
+<pseudo-nanpa>      ::= "nanpa"
+<modifier-special>  ::= "kin" | "ala" | "taso" | "a"
+
+<number>            ::= <word> { <word> } /* Usually wan, tu, luka, mute, ale */
+
+/* -------------------------------------------------------------------------- */
+/* 5. Prepositional Phrases                                                   */
+/* Reference: "how to use prepositions"                                       */
+/* -------------------------------------------------------------------------- */
+
+<prepositional-phrase> ::= <preposition> [ "ala" ] <phrase>
+
+/* -------------------------------------------------------------------------- */
+/* 6. Interjections & Commands                                                */
+/* Reference: "interjections", "the particle o"                               */
+/* -------------------------------------------------------------------------- */
+
+<vocative-command>  ::= [<phrase>] "o" [<predicate-core>]
+<interjection>      ::= <phrase> [ "a" ] | "a"
+
+/* -------------------------------------------------------------------------- */
+/* 7. Questions (Semantic Structures)                                         */
+/* Reference: "questions"                                                     */
+/* Note: These are valid variations of <predicate-core> or <phrase>            */
+/* -------------------------------------------------------------------------- */
+
+<question-x-ala-x>  ::= <word> "ala" <word> /* Valid within <phrase> or <predicate> */
+<question-seme>     ::= "seme"          /* Valid within <phrase> */
+<question-tag>      ::= "anu" "seme"    /* Appended to sentence */
+
+/* -------------------------------------------------------------------------- */
+/* 8. Lexicon (Terminals)                                                     */
+/* Reference: "word types"                                                    */
+/* -------------------------------------------------------------------------- */
+
+<word>              ::= <content-word> | <pronoun> | <question-word>
+
+<preposition>       ::= "lon" | "tawa" | "tan" | "sama" | "kepeken"
+
+/* Strictly the "pu" preverbs as per the 'in-depth' section instructions */
+<preverb>           ::= "wile" | "sona" | "awen" | "kama" | "ken" | "lukin"
+
+<pronoun>           ::= "mi" | "sina" | "ona" | "ni"
+<question-word>     ::= "seme"
+
+<proper-noun>       ::= [A-Z][a-zA-Z]* /* Content words include all valid toki pona words not listed as particles above */
+<content-word>      ::= "akesi" | "ala" | "alasa" | "ale" | "ali" | "anpa" 
+                      | "ante" | "esun" | "ijo" | "ike" | "ilo" | "insa" 
+                      | "jaki" | "jan" | "jelo" | "jo" | "kala" | "kalama" 
+                      | "kasi" | "kili" | "kiwen" | "ko" | "kon" | "kule" 
+                      | "kulupu" | "kute" | "lape" | "laso" | "lawa" | "len" 
+                      | "lete" | "lili" | "linja" | "lipu" | "loje" | "luka" 
+                      | "lupa" | "ma" | "mama" | "mani" | "meli" | "mije" 
+                      | "moku" | "moli" | "monsi" | "mu" | "mun" | "musi" 
+                      | "mute" | "nasa" | "nasin" | "nena" | "nimi" | "noka" 
+                      | "oko" | "olin" | "open" | "pakala" | "pali" | "palisa" 
+                      | "pan" | "pana" | "pijalo" | "pilin" | "pimeja" | "pini" 
+                      | "poki" | "pona" | "pu" | "seli" | "selo" | "sewi" 
+                      | "sijelo" | "sike" | "sin" | "sinpin" | "sitelen" | "soweli" 
+                      | "suli" | "suno" | "supa" | "suwi" | "taso" | "telo" 
+                      | "tenpo" | "toki" | "tomo" | "tonsi" | "tu" | "unpa" 
+                      | "uta" | "utala" | "walo" | "wan" | "waso" | "weka"

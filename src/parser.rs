@@ -1,581 +1,621 @@
 use crate::ast::*;
-use crate::word::Word;
-use chumsky::prelude::*;
-use std::str::FromStr;
+use nom::{
+    IResult, Parser,
+    branch::alt,
+    bytes::complete::{tag, take_while, take_while1},
+    character::complete::{alpha1, multispace0, one_of},
+    combinator::{cut, map, opt, peek, recognize},
+    multi::{many0, many1},
+    sequence::{delimited, pair, preceded, terminated, tuple},
+};
 
-#[derive(Debug, Clone, PartialEq, Eq, Hash)]
-pub enum Token {
-    Word(Word),
-    ProperNoun(String),
-    Punctuation(char), // . : ,
+// --------------------------------------------------------------------------
+// Whitespace and Basic Tokens
+// --------------------------------------------------------------------------
+
+fn lexeme<'a, F, O, E>(inner: F) -> impl FnMut(&'a str) -> IResult<&'a str, O, E>
+where
+    F: Parser<&'a str, O, E>,
+    E: nom::error::ParseError<&'a str>,
+{
+    terminated(inner, multispace0)
 }
 
-impl std::fmt::Display for Token {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        match self {
-            Token::Word(w) => write!(f, "{}", w),
-            Token::ProperNoun(s) => write!(f, "{}", s),
-            Token::Punctuation(c) => write!(f, "{}", c),
-        }
+fn match_tag<'a>(
+    t: &'a str,
+) -> impl FnMut(&'a str) -> IResult<&'a str, &'a str, nom::error::Error<&'a str>> {
+    lexeme(tag(t))
+}
+
+// --------------------------------------------------------------------------
+// Lexicon Lists
+// --------------------------------------------------------------------------
+
+const PREPOSITIONS: &[&str] = &["lon", "tawa", "tan", "sama", "kepeken"];
+const PREVERBS: &[&str] = &["wile", "sona", "awen", "kama", "ken", "lukin"];
+const PRONOUNS: &[&str] = &["mi", "sina", "ona", "ni"];
+const CONTENT_WORDS: &[&str] = &[
+    "akesi", "ala", "alasa", "ale", "ali", "anpa", "ante", "esun", "ijo", "ike", "ilo", "insa",
+    "jaki", "jan", "jelo", "jo", "kala", "kalama", "kasi", "kili", "kiwen", "ko", "kon", "kule",
+    "kulupu", "kute", "lape", "laso", "lawa", "len", "lete", "lili", "linja", "lipu", "loje",
+    "luka", "lupa", "ma", "mama", "mani", "meli", "mije", "moku", "moli", "monsi", "mu", "mun",
+    "musi", "mute", "nasa", "nasin", "nena", "nimi", "noka", "oko", "olin", "open", "pakala",
+    "pali", "palisa", "pan", "pana", "pijalo", "pilin", "pimeja", "pini", "poka", "poki", "pona",
+    "pu", "seli", "selo", "sewi", "sijelo", "sike", "sin", "sinpin", "sitelen", "soweli", "suli",
+    "suno", "supa", "suwi", "taso", "telo", "tenpo", "toki", "tomo", "tonsi", "tu", "unpa", "uta",
+    "utala", "walo", "wan", "waso", "weka",
+];
+
+// --------------------------------------------------------------------------
+// Parsers
+// --------------------------------------------------------------------------
+
+pub fn parse_utterance(input: &str) -> IResult<&str, Utterance> {
+    delimited(
+        multispace0,
+        alt((
+            map(parse_sentence_block, Utterance::Sentence),
+            map(parse_vocative_command, Utterance::Vocative),
+            map(parse_interjection, Utterance::Interjection),
+        )),
+        delimited(multispace0, many0(one_of(".!,?:")), multispace0),
+    )(input)
+}
+
+// 1. Sentence Structure
+
+fn parse_sentence_block(input: &str) -> IResult<&str, SentenceBlock> {
+    let (input, contexts) = many0(terminated(
+        parse_context,
+        terminated(match_tag("la"), opt(lexeme(one_of(",:")))),
+    ))(input)?;
+
+    // If we have contexts, we assume it's a sentence block.
+    let (input, main_clause) = if !contexts.is_empty() {
+        cut(parse_main_clause)(input)?
+    } else {
+        parse_main_clause(input)?
+    };
+
+    Ok((
+        input,
+        SentenceBlock {
+            contexts,
+            main_clause,
+        },
+    ))
+}
+
+fn parse_context(input: &str) -> IResult<&str, Context> {
+    // Avoid left recursion and ambiguous prefixes.
+    // Try to parse SentenceBlock first (checking if it is surrounded by `la` effectively in the parent loop).
+    // But `parse_sentence_block` consumes eagerly.
+    // As discussed, ambiguities exist. We try specialized first.
+    // A sentence block inside a context is "S la".
+    // If we parse SentenceBlock, it will consume "Subj Pred ...".
+    // "mi moku" is SentenceBlock.
+    // "mi moku" is also Phrase (mi modified by moku).
+    // The parser order in `alt` matters.
+    // If we put `parse_sentence_block` first, it might consume "mi moku" as a sentence.
+    // If the input is "mi moku la", and we parse "mi moku" as Sentence, we get Context::Sentence.
+    // If we parsed it as Phrase, we get Context::Phrase.
+    // Which is correct?
+    // "mi moku la" -> "If I eat". This is a clause (Sentence).
+    // "mi moku la" -> "My food ...". This is a Phrase.
+    // Context is ambiguous without broader semantic or detailed syntactic lookahead.
+    // However, BNF line 11 says `context ::= <sentence-block> | <prepositional-phrase> | <phrase>`.
+    // It lists sentence-block first.
+    // But `parse_sentence_block` is expensive and recursive.
+    // Note: `parse_sentence_block` calls `parse_context`. Infinite recursion if we are not careful.
+    // `parse_sentence_block` -> `many0(context "la")` -> `context` -> `sentence_block`.
+    // Loop!
+    // Breaking recursion:
+    // This recursion allows nested contexts: "(A la B) la C".
+    // BNF: <sentence-block> ::= { <context> "la" } <main-clause>
+    // If we are parsing a Context, and we choose SentenceBlock, we expect `{ context la } clause`.
+    // If we have "A la B la C",
+    // Top level: contexts=[A, B], main=C?
+    // Or Context=A (Sentence: B la C? No, B la C is a sentence block).
+    // If "A la B" is a sentence block (A=context, B=main).
+    // Then "(A la B) la C".
+    // So "A la B" is a context.
+    // This implies `parse_sentence_block` consumes "A la B".
+    // "A la" is consumed by `many0` in `parse_sentence_block`.
+    // So `parse_sentence_block("A la B")`:
+    //   context("A") -> parse_phrase("A").
+    //   "la" matched.
+    //   main("B").
+    //   Returns SentenceBlock(contexts=[A], main=B).
+    // Now back to "((A la B) la C)".
+    // Parent `parse_sentence_block`:
+    //   Starts parsing context.
+    //   Tries `parse_sentence_block`.
+    //   It sees "A la B la C".
+    //   It parses "A la B" as a SentenceBlock (as above).
+    //   It expects "la" after it.
+    //   So "A la B la C" -> Context(Sentence(A la B)) "la" Main(C).
+    //   This works.
+
+    // To implement this, `parse_sentence_block` inside `parse_context` works IF strict ordering and limited depth?
+    // No, `parse_sentence_block` will mistakenly look for `context la`.
+    // If input is just "A la B", and we call `parse_sentence_block("A la B")`. It works.
+    // If input is "A", and we call `parse_sentence_block("A")`.
+    //   context -> ... matches phrase "A"? No "la" after it.
+    //   main -> matches phrase "A".
+    //   Returns SentenceBlock([], main=A).
+    //   Then parent `parse_context` checks for `la`? No `parse_context` is just the variant.
+    //   The parent `parse_sentence_block` checks `terminated(context, "la")`.
+    //   So if we define "A" as a SentenceBlock, we consume "A".
+    //   Then we look for "la".
+    //   If "A la ..." -> We found a context.
+    //   So "A" is a sentence block context.
+    //   But "A" is also a Phrase context.
+    //   If `alt` tries SentenceBlock first, it succeeds.
+    //   So "A la B" -> Context(SentenceBlock(A)) "la" Main(B).
+    //   Visually "A" is just phrase. Wrapping it in SentenceBlock(contexts=[], main=A) is valid but verbose.
+    //   But standard parsing prefers the simplest parse?
+    //   The BNF order suggests SentenceBlock.
+    //   However, to avoid infinite recursion stack overflow during parsing:
+    //   `parse_sentence_block` calls `parse_context`. `parse_context` calls `parse_sentence_block`.
+    //   We need to ensure progress.
+    //   `parse_sentence_block` demands `many0(context la)`.
+    //   If `parse_sentence_block` returns a block with NO contexts (just main clause), it effectively reduces to MainClause.
+    //   So `Context::Sentence` covering `MainClause` covering `Phrase` is ambiguous with `Context::Phrase`.
+    //   If we only allow `SentenceBlock` as context IF it has at least one child context?
+    //   Or just accept the recursion and ambiguity.
+    //   Nom `alt` is first-match.
+    //   If `parse_sentence_block` matches logic for `Phrase`, it returns `SentenceBlock`.
+    //   So `Context::Sentence` is returned.
+    //   This means almost everything becomes `Context::Sentence` unless we differentiate.
+    //   Is there a case `run_command` doesn't match?
+    //   Interjections/Vocatives are not in `MainClause`.
+    //   So `parse_sentence_block` is strictly for things that form a clause.
+    //   If I put `parse_sentence_block` first, I might never get `Context::Phrase`.
+    //   Maybe `Context::Phrase` is for fragment answers? But `Context` is mostly "Condition la".
+    //   "telo la" -> "Water, ..." (Context::Phrase).
+    //   "mi moku la" -> "I eat, ..." (Context::Sentence).
+    //   The difference is "mi moku" has Subject+Pred. "telo" is just Head.
+    //   "telo" CAN be a MainClause ("Simple subject? No, General subject? Yes. but needs PredicateMarked").
+    //   "telo li pona".
+    //   "telo" alone is NOT a MainClause (unless imperative context "o"?).
+    //   So `parse_sentence_block("telo")` fails because MainClause requires Subject+Predicate.
+    //   So "telo" as context falls back to parse_phrase.
+    //   "mi moku" as context: parse_sentence_block succeeds.
+    //   So order: SentenceBlock, Prepositional, Phrase is correct.
+    //   "telo" fails SB, matches Phrase.
+    //   "mi moku" matches SB.
+    //   This seems correct and robust.
+
+    // BUT recursion cycle check:
+    // parse_ctx -> parse_sb -> many0(parse_ctx ...).
+    // parse_sb matches `main_clause` (which consumes tokens).
+    // So it consumes tokens. It's not left-recursive (which consumes nothing before calling itself).
+    // So it should terminate.
+
+    // We use parse_main_clause instead of parse_sentence_block to avoid infinite recursion.
+    // "A la B la C" is parsed as flat list of contexts.
+    alt((
+        map(parse_main_clause, |m| {
+            Context::Sentence(Box::new(SentenceBlock {
+                contexts: vec![],
+                main_clause: m,
+            }))
+        }),
+        map(parse_prepositional_phrase, Context::Prepositional),
+        map(parse_phrase, Context::Phrase),
+    ))(input)
+}
+
+fn parse_main_clause(input: &str) -> IResult<&str, MainClause> {
+    alt((
+        map(
+            tuple((parse_subject_simple, parse_predicate_unmarked)),
+            |(s, p)| MainClause::Simple {
+                subject: s,
+                predicate: p,
+            },
+        ),
+        map(
+            tuple((parse_subject_general, parse_predicate_marked)),
+            |(s, p)| MainClause::General {
+                subject: s,
+                predicate: p,
+            },
+        ),
+    ))(input)
+}
+
+// 2. Subjects
+
+fn parse_subject_simple(input: &str) -> IResult<&str, SubjectSimple> {
+    let (input, w) = lexeme(alpha1)(input)?;
+    match w {
+        "mi" => Ok((input, SubjectSimple::Mi)),
+        "sina" => Ok((input, SubjectSimple::Sina)),
+        _ => Err(nom::Err::Error(nom::error::Error::new(
+            input,
+            nom::error::ErrorKind::Tag,
+        ))),
     }
 }
 
-// Tokenizer: char -> Token
-pub fn lexer() -> impl Parser<char, Vec<Token>, Error = Simple<char>> {
-    token_parser().padded().repeated().flatten()
+fn parse_subject_general(input: &str) -> IResult<&str, SubjectGeneral> {
+    let (input, head) = parse_phrase(input)?;
+    let (input, tail) = many0(tuple((parse_conjunction_subject, parse_phrase)))(input)?;
+    Ok((input, SubjectGeneral { head, tail }))
 }
 
-pub fn token_parser() -> impl Parser<char, Option<Token>, Error = Simple<char>> {
-    let punctuation = one_of(".:,!?·;").map(Token::Punctuation);
+fn parse_conjunction_subject(input: &str) -> IResult<&str, ConjunctionSubject> {
+    alt((
+        map(match_tag("en"), |_| ConjunctionSubject::En),
+        map(match_tag("anu"), |_| ConjunctionSubject::Anu),
+    ))(input)
+}
 
-    let ident = text::ident().map(|s: String| {
-        if let Ok(w) = Word::from_str(&s) {
-            Some(Token::Word(w))
-        } else if let Ok(w) = Word::from_str(&s.to_lowercase()) {
-            Some(Token::Word(w))
-        } else if s.chars().next().map_or(false, |c| c.is_uppercase()) {
-            Some(Token::ProperNoun(s))
-        } else {
-            None
+// 3. Predicates
+
+fn parse_predicate_unmarked(input: &str) -> IResult<&str, PredicateUnmarked> {
+    map(parse_predicate_core, PredicateUnmarked)(input)
+}
+
+fn parse_predicate_marker(input: &str) -> IResult<&str, PredicateMarker> {
+    alt((
+        map(match_tag("li"), |_| PredicateMarker::Li),
+        map(match_tag("o"), |_| PredicateMarker::O),
+    ))(input)
+}
+
+fn parse_predicate_marked(input: &str) -> IResult<&str, PredicateMarked> {
+    // We need to differentiate markers to apply `cut`.
+    // <predicate-marker> <predicate-core>
+    let parser = |input| {
+        let (input, marker) = parse_predicate_marker(input)?;
+        match marker {
+            PredicateMarker::Li => {
+                let (input, core) = cut(parse_predicate_core)(input)?;
+                Ok((input, (marker, core)))
+            }
+            PredicateMarker::O => {
+                // DO NOT CUT "o" because "sina o" is also start of Vocative.
+                // If parsing core fails, we might want to backtrack to Vocative.
+                let (input, core) = parse_predicate_core(input)?;
+                Ok((input, (marker, core)))
+            }
         }
-    });
-
-    let header = just('#').then(take_until(text::newline())).ignored();
-    // Allow === or --- for rules
-    let hrule1 = just('=')
-        .repeated()
-        .at_least(2)
-        .then(take_until(text::newline()))
-        .ignored();
-    let hrule2 = just('-')
-        .repeated()
-        .at_least(2)
-        .then(take_until(text::newline()))
-        .ignored();
-    // Ignore verse numbers like "1." or "10."
-    let number = text::int(10).then(just('.').or_not()).ignored();
-    let parens = just('(').then(take_until(just(')'))).ignored();
-    let brackets = just('[').then(take_until(just(']'))).ignored();
-
-    let junk = choice((
-        header,
-        hrule1,
-        hrule2,
-        parens,
-        brackets,
-        number,
-        any().ignored(),
-    ));
-
-    choice((punctuation.map(Some), ident, junk.map(|_| None)))
+    };
+    map(many1(parser), PredicateMarked)(input)
 }
 
-// Parser: Token -> AST
-pub fn parser() -> impl Parser<Token, Program, Error = Simple<Token>> {
-    let phrase = phrase_parser();
+fn parse_predicate_core(input: &str) -> IResult<&str, PredicateCore> {
+    let (input_after_preverbs, preverbs) = many0(parse_preverb_phrase)(input)?;
 
-    let subject_mi = just(Token::Word(Word::Mi)).to(Subject::Mi);
-    let subject_sina = just(Token::Word(Word::Sina)).to(Subject::Sina);
-    let subject_composite = phrase
-        .clone()
-        .separated_by(just(Token::Word(Word::En)))
-        .at_least(1)
-        .map(Subject::Composite);
+    // Try to parse head
+    let head_res = parse_head_predicate(input_after_preverbs);
 
-    let subject = subject_mi.or(subject_sina).or(subject_composite);
-
-    let comma = just(Token::Punctuation(','));
-
-    let prep_phrase = comma
-        .clone()
-        .or_not()
-        .ignore_then(select! {
-            Token::Word(w) if w.is_preposition() => w
-        })
-        .then(phrase.clone())
-        .map(|(preposition, object)| PrepositionalPhrase {
-            preposition,
-            object,
-        });
-
-    let direct_object = comma
-        .clone()
-        .or_not()
-        .ignore_then(just(Token::Word(Word::E)))
-        .ignore_then(phrase.clone());
-
-    let predicate_core = phrase
-        .clone()
-        .then(direct_object.repeated())
-        .then(prep_phrase.clone().repeated())
-        .map(|((head, direct_objects), mut prepositions)| {
-            let (new_head, extracted_pps) = process_head(head);
-            prepositions.splice(0..0, extracted_pps);
-            Predicate {
-                head: new_head,
+    if let Ok((rem, head)) = head_res {
+        let (rem, direct_objects) = many0(parse_direct_object)(rem)?;
+        let (rem, prepositional_phrases) = many0(parse_prepositional_phrase)(rem)?;
+        Ok((
+            rem,
+            PredicateCore {
+                preverbs,
+                head,
                 direct_objects,
-                prepositions,
+                prepositional_phrases,
+            },
+        ))
+    } else {
+        // Head parsing failed.
+        // If we have preverbs, maybe the last preverb is actually the head?
+        // e.g. "mi sona e ni" -> "sona" is head, not preverb.
+        if !preverbs.is_empty() {
+            let mut preverbs = preverbs;
+            let last = preverbs.pop().unwrap();
+
+            // Convert last preverb to head phrase
+            // Reconstruct logic: PreverbPhrase { preverb, ala } -> Phrase { head, modifiers }
+            // We need to use input_after_preverbs as the start for DOs/PPs.
+
+            let head_str = match last.preverb {
+                Preverb::Wile => "wile",
+                Preverb::Sona => "sona",
+                Preverb::Awen => "awen",
+                Preverb::Kama => "kama",
+                Preverb::Ken => "ken",
+                Preverb::Lukin => "lukin",
+            };
+
+            let mut modifiers = Vec::new();
+            if last.ala {
+                modifiers.push(Modifier::Word(Word::Content("ala".to_string())));
+                // Note: 'ala' parsed as preverb modifier is separate.
+                // "sona ala" -> "sona" is head, "ala" is modifier.
             }
-        });
 
-    let li = just(Token::Word(Word::Li));
-    let li_sep = comma.clone().or_not().then(li.clone()).ignored();
-
-    let predicates_rest = li_sep
-        .clone()
-        .ignore_then(predicate_core.clone())
-        .repeated();
-    let predicate_core_inner = predicate_core.clone();
-
-    // Define normal_head (Subject + Predicates) early so we can reuse it
-    let normal_head = subject
-        .clone()
-        .then_with(move |subj| {
-            let is_mi_sina = matches!(subj, Subject::Mi | Subject::Sina);
-            if is_mi_sina {
-                predicate_core_inner
-                    .clone()
-                    .map(|p| vec![p])
-                    .then(predicates_rest.clone())
-                    .map(|(mut first, mut rest)| {
-                        first.append(&mut rest);
-                        first
-                    })
-                    .boxed()
-            } else {
-                li_sep
-                    .clone()
-                    .ignore_then(predicate_core_inner.clone())
-                    .chain(predicates_rest.clone())
-                    .boxed()
-            }
-            .map(move |predicates| (subj.clone(), predicates))
-        })
-        .map(|(subject, predicates)| Head::SubjectPredicate {
-            subject,
-            predicates,
-        });
-
-    let imperative_head = just(Token::Word(Word::O))
-        .ignore_then(predicate_core.clone())
-        .map(|pred| Head::PredicateOnly(vec![pred]));
-
-    let optative_head = subject
-        .clone()
-        .then_ignore(just(Token::Word(Word::O)))
-        .then(predicate_core.clone())
-        .map(|(subject, predicate)| Head::Optative {
-            subject,
-            predicates: vec![predicate],
-        });
-
-    let head = normal_head
-        .or(optative_head)
-        .or(imperative_head)
-        .or(phrase.clone().map(Head::Phrase));
-
-    let sentence_end = select! {
-        Token::Punctuation(c) if ".:!?;·".contains(c) => c
-    };
-
-    // Context can be a full sentence (Head only since context doesn't recurse) OR a phrase
-    // We use 'head' which covers SubjectPredicate, PredicateOnly (imperative), and Phrase (fragment).
-    let context_block = head
-        .clone()
-        .map(|h| match h {
-            Head::Phrase(p) => ContextPart::Phrase(p),
-            _ => ContextPart::Sentence(Box::new(NormalSentence {
-                context: None,
-                head: h,
-            })),
-        })
-        .then_ignore(just(Token::Word(Word::La)))
-        .then_ignore(comma.clone().or_not());
-
-    let context = context_block
-        .repeated()
-        .at_least(1)
-        .map(|parts| Context { parts })
-        .or_not();
-
-    let normal_sentence = context
-        .then(head.clone())
-        .map(|(context, head)| NormalSentence { context, head });
-
-    let vocative_target = phrase
-        .clone()
-        .then_ignore(just(Token::Word(Word::O)))
-        .then_ignore(comma.clone().or_not());
-
-    let anu_seme = comma
-        .clone()
-        .or_not()
-        .then(just(Token::Word(Word::Anu)))
-        .then(just(Token::Word(Word::Seme)))
-        .ignored();
-
-    let normal_sentence_checked =
-        normal_sentence
-            .clone()
-            .then(anu_seme.or_not())
-            .map(|(sentence, anu_seme_opt)| {
-                if anu_seme_opt.is_some() {
-                    Sentence::Question(QuestionSentence {
-                        sentence,
-                        method: QuestionMethod::AnuSeme,
-                    })
-                } else if is_x_ala_x(&sentence) {
-                    Sentence::Question(QuestionSentence {
-                        sentence,
-                        method: QuestionMethod::VerbAlaVerb,
-                    })
-                } else if contains_tan_seme(&sentence) {
-                    Sentence::Question(QuestionSentence {
-                        sentence,
-                        method: QuestionMethod::Why,
-                    })
-                } else if contains_nasin_seme(&sentence) {
-                    Sentence::Question(QuestionSentence {
-                        sentence,
-                        method: QuestionMethod::How,
-                    })
-                } else if contains_seme(&sentence) {
-                    Sentence::Question(QuestionSentence {
-                        sentence,
-                        method: QuestionMethod::Seme(vec![Word::Seme]),
-                    })
-                } else {
-                    Sentence::Normal(sentence)
-                }
+            let head = HeadPredicate::Phrase(Phrase {
+                head: Word::Content(head_str.to_string()),
+                modifiers,
             });
 
-    let vocative_sentence = vocative_target
-        .then(normal_sentence_checked.clone().or_not()) // Command is optional
-        .map(|(target, sent)| match sent {
-            Some(Sentence::Question(q)) => Sentence::Question(q),
-            Some(Sentence::Normal(n)) => Sentence::Vocative(VocativeSentence {
-                target,
-                command: Some(n),
-            }),
-            Some(Sentence::Vocative(_)) => unreachable!(), // recursive vocative?
-            Some(Sentence::Junk(_)) => unreachable!(),
-            None => Sentence::Vocative(VocativeSentence {
-                target,
-                command: None,
-            }),
-        });
+            // Now continue parsing from input_after_preverbs (where head matches failed)
+            let (rem, direct_objects) = many0(parse_direct_object)(input_after_preverbs)?;
+            let (rem, prepositional_phrases) = many0(parse_prepositional_phrase)(rem)?;
 
-    let terminator = sentence_end.clone().ignored().or(end());
-
-    let full_sentence = normal_sentence_checked
-        .then_ignore(terminator.clone())
-        .or(vocative_sentence.then_ignore(terminator));
-
-    // Fallback Recovery
-    let non_terminator = filter(|t| {
-        matches!(
-            t,
-            Token::Word(_) | Token::ProperNoun(_) | Token::Punctuation(',')
-        )
-    });
-
-    // 1. Consume tokens until punctuation (and consume the punctuation).
-    // Allows 0 tokens before punctuation (handles lone dots).
-    let junk_with_punct = non_terminator
-        .clone()
-        .repeated()
-        .then_ignore(sentence_end.clone().ignored());
-
-    // 2. Consume tokens until EOF.
-    // Must consume at least 1 token to avoid infinite loop at EOF.
-    let junk_at_eof = non_terminator
-        .clone()
-        .repeated()
-        .at_least(1)
-        .then_ignore(end());
-
-    let junk_sentence = junk_with_punct.or(junk_at_eof).map(|tokens: Vec<Token>| {
-        let content = tokens
-            .iter()
-            .map(|t| t.to_string())
-            .collect::<Vec<_>>()
-            .join(" ");
-        Sentence::Junk(content)
-    });
-
-    full_sentence
-        .or(junk_sentence)
-        .repeated()
-        .map(|sentences| Program { sentences })
-}
-
-pub fn phrase_parser() -> impl Parser<Token, Phrase, Error = Simple<Token>> + Clone {
-    recursive(|phrase| {
-        let pi_phrase = just(Token::Word(Word::Pi))
-            .ignore_then(phrase.clone())
-            .map(Modifier::PiPhrase);
-        let modifier_word = select! {
-            Token::Word(w) if !w.is_particle() || w == Word::Ala => w,
-        }
-        .map(Modifier::Word);
-        let modifier_proper = select! { Token::ProperNoun(s) => s }.map(Modifier::ProperNoun);
-        let modifier = pi_phrase.or(modifier_word).or(modifier_proper);
-
-        let head_word = select! { Token::Word(w) if !w.is_particle() => PhraseHead::Word(w) };
-        let head_proper = select! { Token::ProperNoun(s) => PhraseHead::ProperNoun(s) };
-        let head = head_word.or(head_proper);
-
-        head.then(modifier.repeated())
-            .map(|(head, modifiers)| Phrase { head, modifiers })
-    })
-}
-
-fn process_head(mut phrase: Phrase) -> (Phrase, Vec<PrepositionalPhrase>) {
-    let mut extracted_pps = Vec::new();
-    let mut current_modifiers = Vec::new();
-    let mut pending_modifiers = phrase.modifiers.into_iter();
-
-    while let Some(modifier) = pending_modifiers.next() {
-        let is_prep = match &modifier {
-            Modifier::Word(w) => w.is_preposition(),
-            _ => false,
-        };
-        if is_prep {
-            let mut remaining: Vec<Modifier> = pending_modifiers.collect();
-            if remaining.is_empty() {
-                current_modifiers.push(modifier);
-                break;
-            } else {
-                let prep_word = match modifier {
-                    Modifier::Word(w) => w,
-                    _ => unreachable!(),
-                };
-                let first = remaining.remove(0);
-                if let Modifier::Word(head_word) = first {
-                    let object_phrase = Phrase {
-                        head: PhraseHead::Word(head_word),
-                        modifiers: remaining,
-                    };
-                    let (cleaned_object, sub_pps) = process_head(object_phrase);
-                    extracted_pps.push(PrepositionalPhrase {
-                        preposition: prep_word,
-                        object: cleaned_object,
-                    });
-                    extracted_pps.extend(sub_pps);
-                    break;
-                } else {
-                    current_modifiers.push(Modifier::Word(prep_word));
-                    current_modifiers.push(first);
-                    pending_modifiers = remaining.into_iter();
-                }
-            }
+            Ok((
+                rem,
+                PredicateCore {
+                    preverbs,
+                    head,
+                    direct_objects,
+                    prepositional_phrases,
+                },
+            ))
         } else {
-            current_modifiers.push(modifier);
+            // No preverbs to fall back on, return the original error
+            head_res.map(|_| unreachable!())
         }
     }
-    phrase.modifiers = current_modifiers;
-    (phrase, extracted_pps)
 }
 
-fn is_x_ala_x(sentence: &NormalSentence) -> bool {
-    let check_phrase = |phrase: &Phrase| {
-        let head_word = match &phrase.head {
-            PhraseHead::Word(w) => *w,
-            _ => return false,
+fn parse_head_predicate(input: &str) -> IResult<&str, HeadPredicate> {
+    alt((
+        map(parse_prepositional_phrase, HeadPredicate::Prepositional),
+        map(parse_phrase, HeadPredicate::Phrase),
+    ))(input)
+}
+
+fn parse_preverb_phrase(input: &str) -> IResult<&str, PreverbPhrase> {
+    let (input, preverb) = parse_preverb(input)?;
+    let (input, ala) = opt(match_tag("ala"))(input)?;
+    Ok((
+        input,
+        PreverbPhrase {
+            preverb,
+            ala: ala.is_some(),
+        },
+    ))
+}
+
+fn parse_direct_object(input: &str) -> IResult<&str, Phrase> {
+    preceded(match_tag("e"), cut(parse_phrase))(input)
+}
+
+// 4. Phrases & Modifiers
+
+fn parse_phrase(input: &str) -> IResult<&str, Phrase> {
+    let (input, head) = parse_word(input)?;
+    let (input, modifiers) = many0(parse_modifier)(input)?;
+    Ok((input, Phrase { head, modifiers }))
+}
+
+fn parse_modifier(input: &str) -> IResult<&str, Modifier> {
+    alt((
+        map(preceded(match_tag("pi"), cut(parse_phrase)), Modifier::Pi),
+        map(preceded(match_tag("anu"), cut(parse_phrase)), Modifier::Anu),
+        map(
+            preceded(match_tag("nanpa"), cut(parse_number)),
+            Modifier::Nanpa,
+        ),
+        parse_modifier_special,
+        map(parse_proper_noun, Modifier::ProperNoun),
+        map(parse_word, Modifier::Word),
+    ))(input)
+}
+
+fn parse_modifier_special(input: &str) -> IResult<&str, Modifier> {
+    let (input, s) = lexeme(alpha1)(input)?;
+    if ["kin", "ala", "taso", "a"].contains(&s) {
+        Ok((input, Modifier::Special(s.to_string())))
+    } else {
+        Err(nom::Err::Error(nom::error::Error::new(
+            input,
+            nom::error::ErrorKind::Tag,
+        )))
+    }
+}
+
+fn parse_number(input: &str) -> IResult<&str, Number> {
+    map(many1(parse_word), Number)(input)
+}
+
+// 5. Prepositional Phrases
+
+fn parse_prepositional_phrase(input: &str) -> IResult<&str, PrepositionalPhrase> {
+    let (input, preposition) = parse_preposition(input)?;
+    let (input, ala_opt) = opt(match_tag("ala"))(input)?;
+    let (input, object) = parse_phrase(input)?;
+    Ok((
+        input,
+        PrepositionalPhrase {
+            preposition,
+            ala: ala_opt.is_some(),
+            object,
+        },
+    ))
+}
+
+// 6. Interjections & Commands
+
+fn parse_vocative_command(input: &str) -> IResult<&str, VocativeCommand> {
+    let (input, target) = opt(terminated(parse_phrase, match_tag("o")))(input)?;
+    let (input, _) = if target.is_none() {
+        match_tag("o")(input)?
+    } else {
+        (input, "o")
+    };
+    let (input, predicate) = opt(parse_predicate_core)(input)?;
+    Ok((input, VocativeCommand { target, predicate }))
+}
+
+fn parse_interjection(input: &str) -> IResult<&str, Interjection> {
+    alt((
+        map(tuple((parse_phrase, opt(match_tag("a")))), |(p, a)| {
+            Interjection::Phrase {
+                phrase: p,
+                a: a.is_some(),
+            }
+        }),
+        map(match_tag("a"), |_| Interjection::A),
+    ))(input)
+}
+
+// 8. Lexicon
+
+fn parse_word(input: &str) -> IResult<&str, Word> {
+    let (input, w) = peek(lexeme(alpha1))(input)?;
+
+    if PRONOUNS.contains(&w) {
+        let (input, _) = lexeme(alpha1)(input)?;
+        let p = match w {
+            "mi" => Pronoun::Mi,
+            "sina" => Pronoun::Sina,
+            "ona" => Pronoun::Ona,
+            "ni" => Pronoun::Ni,
+            _ => unreachable!(),
         };
-        if phrase.modifiers.len() >= 2 {
-            if let (Modifier::Word(w1), Modifier::Word(w2)) =
-                (&phrase.modifiers[0], &phrase.modifiers[1])
-            {
-                if *w1 == Word::Ala && *w2 == head_word {
-                    return true;
-                }
-            }
-        }
-        false
-    };
-
-    match &sentence.head {
-        Head::SubjectPredicate { predicates, .. } => {
-            predicates.iter().any(|p| check_phrase(&p.head))
-        }
-        Head::Optative { predicates, .. } => predicates.iter().any(|p| check_phrase(&p.head)),
-        Head::PredicateOnly(predicates) => predicates.iter().any(|p| check_phrase(&p.head)),
-        Head::Phrase(p) => check_phrase(p),
+        Ok((input, Word::Pronoun(p)))
+    } else if w == "seme" {
+        let (input, _) = lexeme(alpha1)(input)?;
+        Ok((input, Word::Question("seme".to_string())))
+    } else if CONTENT_WORDS.contains(&w) || PREPOSITIONS.contains(&w) || PREVERBS.contains(&w) {
+        let (input, w) = lexeme(alpha1)(input)?;
+        Ok((input, Word::Content(w.to_string())))
+    } else {
+        Err(nom::Err::Error(nom::error::Error::new(
+            input,
+            nom::error::ErrorKind::Tag,
+        )))
     }
 }
 
-fn contains_seme(sentence: &NormalSentence) -> bool {
-    // Check context for "seme"
-    if let Some(ctx) = &sentence.context {
-        if ctx.parts.iter().any(|part| match part {
-            ContextPart::Phrase(p) => phrase_has_seme(p),
-            _ => false,
-        }) {
-            return true;
-        }
-    }
-
-    // Check head
-    match &sentence.head {
-        Head::SubjectPredicate {
-            subject,
-            predicates,
-        } => {
-            let subject_has = match subject {
-                Subject::Composite(phrases) => phrases.iter().any(phrase_has_seme),
-                _ => false,
-            };
-            if subject_has {
-                return true;
-            }
-            predicates.iter().any(predicate_has_seme)
-        }
-        Head::Optative { predicates, .. } => predicates.iter().any(predicate_has_seme),
-        Head::PredicateOnly(predicates) => predicates.iter().any(predicate_has_seme),
-        Head::Phrase(p) => phrase_has_seme(p),
+fn parse_preposition(input: &str) -> IResult<&str, Preposition> {
+    let (input, w) = lexeme(alpha1)(input)?;
+    match w {
+        "lon" => Ok((input, Preposition::Lon)),
+        "tawa" => Ok((input, Preposition::Tawa)),
+        "tan" => Ok((input, Preposition::Tan)),
+        "sama" => Ok((input, Preposition::Sama)),
+        "kepeken" => Ok((input, Preposition::Kepeken)),
+        _ => Err(nom::Err::Error(nom::error::Error::new(
+            input,
+            nom::error::ErrorKind::Tag,
+        ))),
     }
 }
 
-fn phrase_has_seme(phrase: &Phrase) -> bool {
-    if let PhraseHead::Word(w) = phrase.head {
-        if w == Word::Seme {
-            return true;
-        }
-    }
-    for modi in &phrase.modifiers {
-        match modi {
-            Modifier::Word(w) => {
-                if *w == Word::Seme {
-                    return true;
-                }
-            }
-            Modifier::PiPhrase(p) => {
-                if phrase_has_seme(p) {
-                    return true;
-                }
-            }
-            _ => {}
-        }
-    }
-    false
-}
-
-fn predicate_has_seme(pred: &Predicate) -> bool {
-    if phrase_has_seme(&pred.head) {
-        return true;
-    }
-    if pred.direct_objects.iter().any(phrase_has_seme) {
-        return true;
-    }
-    if pred
-        .prepositions
-        .iter()
-        .any(|pp| pp.preposition == Word::Seme || phrase_has_seme(&pp.object))
-    {
-        return true;
-    }
-    false
-}
-
-fn contains_tan_seme(sentence: &NormalSentence) -> bool {
-    // Check context for "tan seme"
-    if let Some(ctx) = &sentence.context {
-        if ctx.parts.iter().any(|part| match part {
-            ContextPart::Phrase(p) => is_specific_phrase(p, Word::Tan, Word::Seme),
-            _ => false,
-        }) {
-            return true;
-        }
-    }
-
-    // Check prepositions for "tan seme"
-    let check_preds = |preds: &[Predicate]| {
-        preds.iter().any(|pred| {
-            pred.prepositions.iter().any(|pp| {
-                let object_is_seme = match &pp.object.head {
-                    PhraseHead::Word(w) => *w == Word::Seme,
-                    _ => false,
-                };
-                pp.preposition == Word::Tan && object_is_seme
-            })
-        })
-    };
-
-    match &sentence.head {
-        Head::SubjectPredicate { predicates, .. } => check_preds(predicates),
-        Head::PredicateOnly(preds) => preds.iter().any(|p| {
-            p.prepositions.iter().any(|pp| {
-                pp.preposition == Word::Tan && pp.object.head == PhraseHead::Word(Word::Seme)
-            })
-        }),
-        Head::Optative { predicates, .. } => predicates.iter().any(|p| {
-            p.prepositions.iter().any(|pp| {
-                pp.preposition == Word::Tan && pp.object.head == PhraseHead::Word(Word::Seme)
-            })
-        }),
-        Head::Phrase(p) => is_specific_phrase(p, Word::Tan, Word::Seme),
+fn parse_preverb(input: &str) -> IResult<&str, Preverb> {
+    let (input, w) = lexeme(alpha1)(input)?;
+    match w {
+        "wile" => Ok((input, Preverb::Wile)),
+        "sona" => Ok((input, Preverb::Sona)),
+        "awen" => Ok((input, Preverb::Awen)),
+        "kama" => Ok((input, Preverb::Kama)),
+        "ken" => Ok((input, Preverb::Ken)),
+        "lukin" => Ok((input, Preverb::Lukin)),
+        _ => Err(nom::Err::Error(nom::error::Error::new(
+            input,
+            nom::error::ErrorKind::Tag,
+        ))),
     }
 }
 
-fn contains_nasin_seme(sentence: &NormalSentence) -> bool {
-    // Check context for "nasin seme"
-    if let Some(ctx) = &sentence.context {
-        if ctx.parts.iter().any(|part| match part {
-            ContextPart::Phrase(p) => is_specific_phrase(p, Word::Nasin, Word::Seme),
-            _ => false,
-        }) {
-            return true;
-        }
-    }
-    false
-}
-
-fn is_specific_phrase(phrase: &Phrase, head: Word, modifier: Word) -> bool {
-    match &phrase.head {
-        PhraseHead::Word(w) => {
-            if *w != head {
-                return false;
-            }
-        }
-        _ => return false,
-    }
-
-    if phrase.modifiers.len() >= 1 {
-        if let Modifier::Word(w) = &phrase.modifiers[0] {
-            return *w == modifier;
-        }
-    }
-    false
+fn parse_proper_noun(input: &str) -> IResult<&str, String> {
+    let (input, s) = lexeme(recognize(pair(
+        take_while1(|c: char| c.is_ascii_uppercase()),
+        take_while(|c: char| c.is_ascii_alphabetic()),
+    )))(input)?;
+    Ok((input, s.to_string()))
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    fn parse(input: &str) -> Program {
-        let le = lexer();
-        let tokens = le.parse(input).unwrap();
-        let pa = parser();
-        pa.parse(tokens).unwrap()
+    #[test]
+    fn test_simple_sentence() {
+        let input = "mi moku";
+        let res = parse_utterance(input);
+        assert!(res.is_ok());
+        println!("{:?}", res.unwrap());
     }
 
     #[test]
-    fn test_basic_sentences() {
-        let p = parse("mi moku.");
-        assert_eq!(p.sentences.len(), 1);
+    fn test_complex_sentence() {
+        let input = "tenpo suno ni la mi wile moku e kili";
+        let res = parse_utterance(input);
+        match res {
+            Ok((rem, u)) => {
+                assert_eq!(rem, "");
+                println!("{:?}", u);
+            }
+            Err(e) => panic!("Parse failed: {:?}", e),
+        }
     }
 
     #[test]
-    fn test_fallback() {
-        let p = parse("mi li moku. mi moku.");
-        assert_eq!(p.sentences.len(), 2);
+    fn test_questions() {
+        let input = "sina sona ala sona e toki pona"; // X ala X question
+        let res = parse_utterance(input);
+        assert!(res.is_ok());
     }
 
     #[test]
-    fn test_fallback_lone_punct() {
-        // Lone dot at start should be eaten as junk.
-        let p = parse(". mi moku.");
-        assert_eq!(p.sentences.len(), 2); // 1 junk, 1 normal
+    fn test_mi_sona_ala_e_ni() {
+        let input = "mi sona ala e ni.";
+        let result = parse_utterance(input);
+        assert!(
+            result.is_ok(),
+            "Failed to parse 'mi sona ala e ni.': {:?}",
+            result.err()
+        );
+    }
+
+    #[test]
+    fn test_text_new_multiline() {
+        let input = "mi sona ala e ni.
+1. tenpo open la, toki li lon. toki li lon poka sewi. toki li sewi.
+2. open la, ona li lon poka sewi.
+3. ona la, ale li kama lon. ona ala la, ala li kama lon.";
+        let text = Text::new(input);
+        // We expect "mi sona ala e ni." to be parsed.
+        // It should be the first utterance.
+        let _utterances: Vec<&Utterance> = text.utterances().collect();
+        // If it failed to parse, Text::new skips it, so we won't see it.
+        // We expect at least one utterance from the first line.
+        let first_text = text.parsed_text();
+        assert!(
+            first_text.contains("mi sona ala e ni"),
+            "First sentence was not parsed! Parsed text: {}",
+            first_text
+        );
+        println!("Parsed text: {}", first_text);
+    }
+
+    #[test]
+    fn test_broken_sentence_error() {
+        // "tenpo la" is a context. "li moku." is invalid main clause (no subject).
+        // Should fail HARD (Failure) or generic Error?
+        // "li moku" fails parse_main_clause.
+        // Because "tenpo la" context succeeded, we `cut` the main clause.
+        // So this MUST be a Failure.
+        let input = "tenpo la li moku.";
+        let res = parse_utterance(input);
+        match res {
+            Err(nom::Err::Failure(_)) => println!("Correctly failed with Failure"),
+            Err(nom::Err::Error(_)) => panic!("Should have been a Failure, got Error"),
+            Ok(_) => panic!("Should have failed"),
+            _ => panic!("Unexpected result: {:?}", res),
+        }
+
+        // "mi moku e." -> "e" followed by nothing.
+        // `cut(parse_phrase)` should trigger Failure.
+        let input2 = "mi moku e.";
+        let res2 = parse_utterance(input2);
+        match res2 {
+            Err(nom::Err::Failure(_)) => println!("Correctly failed e with Failure"),
+            Err(nom::Err::Error(_)) => panic!("Should have been a Failure for e, got Error"),
+            Ok(_) => panic!("Should have failed e"),
+            _ => panic!("Unexpected result: {:?}", res2),
+        }
     }
 }
