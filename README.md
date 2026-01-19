@@ -14,6 +14,8 @@ A suite of tools for working with the toki-pona language.
     - [Part of Speech Tagging](#part-of-speech-tagging)
     - [Constituency Parsing](#constituency-parsing)
   - [Corpus](#corpus)
+- [About the Author](#about-the-author)
+  - [My Interesting Links](#my-interesting-links)
 
 ## Components
 
