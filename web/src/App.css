@@ -192,7 +192,6 @@
   font-weight: 700;
   color: var(--accent-primary);
   margin-bottom: 0.5rem;
-  text-transform: capitalize;
 }
 
 @keyframes slideIn {
