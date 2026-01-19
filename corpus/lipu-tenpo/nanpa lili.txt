@@ -1,0 +1,193 @@
+
+
+--- PAGE 1 ---
+
+```
+lipu tenpo
+
+> nanpa lili
+```
+
+--- PAGE 2 ---
+
+```markdown
+> o kama pona!
+ale li lili lon
+lipu tenpo ni.
+o pilin suwi
+kepeken ona!
+— jan Sonatan
+
+jan Ke Tami
+li sitelen
+e sitelen
+sinpin.
+
+jan Kasape
+li sijelo
+e lipu.
+
+lipu ni li tan kulupu
+lipu tenpo e.V.
+kulupu ni li lon ma Aken.
+ona li lon ma Tosi.
+mi pana e lipu ni
+lon tenpo nanpa 2024.
+```
+
+--- PAGE 3 ---
+
+```markdown
+> waso soweli pi lili nanpa wan
+
+## tan jan Ke Tami
+
+> luka pi waso soweli li sama waso ante li ken e tawa lon kon, taso ona li sama selo wan taso anu lipu wan taso. suno li kama anu pini la ona li alasa e pipi lon tenpo lili. alasa li lon tenpo ilo suli wan. taso telo wawa anu lete wawa li kama la ona li wile pini e alasa. ni li tan lili ona.
+
+ona pi lili nanpa wan li suli seme?
+pipi suli a en waso ni li ken lili sama. luka sina li ken sama kasi suli tawa ona. lili a!
+```
+
+--- PAGE 4 ---
+
+```markdown
+# pipi pali
+
+## tan jan Ke Tami
+
+> ①  >  Ʒ  Ʒ  >  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> ②  Ʒ  Ʒ  Ʒ  >  Ʒ  Ʒ  Ʒ  Ʒ
+> ③  >  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> ④  Ʒ  Ʒ  Ʒ  >  Ʒ  Ʒ  Ʒ  Ʒ
+> ⑤  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> ⑥  >  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> ⑦  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> ⑧  Ʒ  Ʒ  Ʒ  >  Ʒ  Ʒ  Ʒ  Ʒ
+> ⑨  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> ⑩  >  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+
+> 1.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 2.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 3.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 4.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 5.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 6.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 7.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 8.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 9.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 10.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+
+> musi linja
+>
+> 1.  sina li pona e  Ʒ  Ʒ
+> 2.  jan li wile e  Ʒ  Ʒ
+> 3.  suli li ken  Ʒ  Ʒ
+> 4.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 5.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 6.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 7.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 8.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 9.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 10.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+>
+> 11.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 12.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 13.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 14.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+> 15.  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ  Ʒ
+>
+> *Note: The symbols (Ʒ) represent Toki Pona letters or words that are not clearly identifiable in this image. For a complete transcription, the actual Toki Pona text would be required.*
+```
+
+--- PAGE 5 ---
+
+```markdown
+# olin sin
+
+## tan jan Alonola
+
+ona suwi li pona li lon poka mi
+insa mi li nasa li kama seli
+ona li wawa li wile suli
+ona li pana e kilin tawa mi
+
+kon sewi li lon ala toki ni pilin
+pilin mi li sona ala e nasin
+linja en oko li pona lukin
+mi wile awen pilin e olin
+
+mi wile olin taso e ona
+ike o pakala ala e mi
+mi wile awen pilin sama ni
+```
+
+--- PAGE 6 ---
+
+```markdown
+# linja mute tan jan Ke Tami
+
+> o linja e sitelen. linja li toki e nimi kepeken sitelen ona. o kepeken sitelen wan lon linja wan taso. linja wan la, o kepeken sitelen wan lon tenpo wan taso. linja li ken tawa sitelen poka ale. nimi luka tu li lon la o kepeken linja luka tu taso.
+
+---
+## musi linja
+
+1. a w a s o
+   k e i p i
+   i s p k a
+   j a l a s
+   i n a k i
+   l e w o s
+```
+
+--- PAGE 7 ---
+
+```markdown
+# seme li mi
+## tan jan Alonola
+
+> musi · 7
+
+**Column 1:**
+- li wile sona e seme
+- jan li pona e ni:
+  - li wile e telo
+  - li wile e ma
+  - li wile e pakala
+- li ken pana e ni:
+  - li pana e jan
+  - li pana e suli
+  - li pana e kili
+- li ken ala pana e ni:
+  - li ken ala pana e jan
+  - li ken ala pana e kili
+
+**Column 2:**
+- li wile sona e seme
+- li ken ala pana e ni:
+  - li ken ala pana e ma
+  - li ken ala pana e pakala
+- li wile e ni:
+  - li wile e jan
+  - li wile e kili
+- li ken pana e ni:
+  - li pana e telo
+  - li pana e ma
+
+**Column 3:**
+- li wile sona e seme
+- li ken pana e ni:
+  - li pana e jan
+  - li pana e kili
+- li ken ala pana e ni:
+  - li ken ala pana e telo
+  - li ken ala pana e ma
+- li wile e ni:
+  - li wile e pakala
+  - li wile e suli
+```
+
+--- PAGE 8 ---
+
+    ```
+    sina wile pana anu ante e ijo pi lipu ni la o lon nasin CC BY-SA 4.0.
+    ```
