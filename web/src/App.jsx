@@ -6,7 +6,7 @@ import './App.css'
 
 function App() {
   const [isWasmReady, setIsWasmReady] = useState(false)
-  const [input, setInput] = useState("mi wile e ni: sina kama sona e toki pona!")
+  const [input, setInput] = useState("mi wile e ni: sina kama sona e toki pona!\ntomo tawa supa mi pi lon sewi li jo e kala linja mute mute!")
   const [parsedTree, setParsedTree] = useState(null)
   
   // Interaction State
