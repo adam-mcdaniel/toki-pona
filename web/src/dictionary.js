@@ -57,7 +57,7 @@ export const dictionary = {
   mama: "parent, ancestor, creator, to create, to parent, to take care of",
   mani: "money, cash, savings, wealth",
   meli: "woman, female, wife, feminine",
-  mi: "I, me, my, we, us, our",
+  mi: "I, me, my",
   mije: "man, male, husband, masculine",
   moku: "eat, drink, consume, swallow, consume, edible, food, meal",
   moli: "dead, dying, to kill",
@@ -106,7 +106,7 @@ export const dictionary = {
   sinpin: "face, foremost, front, wall, of the face",
   sitelen:
     "image, picture, representation, writing, recorded, to write, to draw, to record",
-  sona: "know, be skilled in, be wisdom, to know (preverb), information, knowledge",
+  sona: "know, to understand, wisdom, expertise, to know (preverb), information, knowledge",
   soweli: "animal, beast, land mammal",
   suli: "big, heavy, large, long, tall, to grow, to become big",
   suno: "sun, light, light source, to shine, to glow, to burn",
