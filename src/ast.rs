@@ -1,3 +1,5 @@
+use crate::utils;
+
 #[derive(Debug, Clone, PartialEq)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct Text {
@@ -71,6 +73,44 @@ impl Text {
             .collect::<Vec<_>>()
             .join(" ")
     }
+
+    pub fn parsed(&self) -> &Vec<(Span, Utterance)> {
+        &self.parsed
+    }
+
+    pub fn errors(&self) -> Vec<(Span, String)> {
+        // The spaces between spans
+        let mut last_end = 0;
+        self.parsed
+            .iter()
+            .map(|(span, _)| {
+                let space = &self.raw[last_end..span.start];
+                last_end = span.end;
+                (*span, space.to_string())
+            })
+            .filter(|(span, space)| !space.is_empty())
+            .collect()
+    }
+
+    pub fn tag(&self) -> Vec<utils::TaggedWord> {
+        utils::tag_text(self)
+    }
+
+    pub fn constituents(&self) -> Vec<utils::ConstituencyNode> {
+        utils::build_tree(self)
+    }
+}
+
+impl From<String> for Text {
+    fn from(value: String) -> Self {
+        Self::new(value)
+    }
+}
+
+impl From<&str> for Text {
+    fn from(value: &str) -> Self {
+        Self::new(value)
+    }
 }
 
 #[derive(Debug, Clone, Copy, PartialEq)]
@@ -78,6 +118,20 @@ impl Text {
 pub struct Span {
     pub start: usize,
     pub end: usize,
+}
+
+impl Span {
+    pub fn len(&self) -> usize {
+        self.end - self.start
+    }
+
+    pub fn is_empty(&self) -> bool {
+        self.len() == 0
+    }
+
+    pub fn get_text<'a>(&self, text: &'a str) -> &'a str {
+        &text[self.start..self.end]
+    }
 }
 
 #[derive(Debug, Clone, PartialEq)]
