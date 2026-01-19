@@ -39,11 +39,11 @@ const CONTENT_WORDS: &[&str] = &[
     "jaki", "jan", "jelo", "jo", "kala", "kalama", "kasi", "kili", "kiwen", "ko", "kon", "kule",
     "kulupu", "kute", "lape", "laso", "lawa", "len", "lete", "lili", "linja", "lipu", "loje",
     "luka", "lupa", "ma", "mama", "mani", "meli", "mije", "moku", "moli", "monsi", "mu", "mun",
-    "musi", "mute", "nasa", "nasin", "nena", "nimi", "noka", "oko", "olin", "open", "pakala",
-    "pali", "palisa", "pan", "pana", "pijalo", "pilin", "pimeja", "pini", "poka", "poki", "pona",
-    "pu", "seli", "selo", "sewi", "sijelo", "sike", "sin", "sinpin", "sitelen", "soweli", "suli",
-    "suno", "supa", "suwi", "taso", "telo", "tenpo", "toki", "tomo", "tonsi", "tu", "unpa", "uta",
-    "utala", "walo", "wan", "waso", "weka",
+    "musi", "mute", "nanpa", "nasa", "nasin", "nena", "nimi", "noka", "oko", "olin", "open",
+    "pakala", "pali", "palisa", "pan", "pana", "pijalo", "pilin", "pimeja", "pini", "poka", "poki",
+    "pona", "pu", "seli", "selo", "sewi", "sijelo", "sike", "sin", "sinpin", "sitelen", "soweli",
+    "suli", "suno", "supa", "suwi", "taso", "telo", "tenpo", "toki", "tomo", "tonsi", "tu", "unpa",
+    "uta", "utala", "walo", "wan", "waso", "weka",
 ];
 
 // --------------------------------------------------------------------------
@@ -577,6 +577,18 @@ mod tests {
         assert!(
             result.is_ok(),
             "Failed to parse 'mi mute li sona e ni.': {:?}",
+            result.err()
+        );
+    }
+
+    #[test]
+    fn test_taso_start() {
+        let input =
+            "taso lipu anu sitelen tawa anu ijo sama ni la ijo pi nanpa lili li lon toki pona.";
+        let result = parse_utterance(input);
+        assert!(
+            result.is_ok(),
+            "Failed to parse 'taso ...': {:?}",
             result.err()
         );
     }
