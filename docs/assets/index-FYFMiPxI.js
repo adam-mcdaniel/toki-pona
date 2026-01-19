@@ -7448,7 +7448,7 @@ async function Gv(l3, i) {
 }
 async function Lv(l3) {
   if (te !== void 0) return te;
-  l3 !== void 0 && (Object.getPrototypeOf(l3) === Object.prototype ? { module_or_path: l3 } = l3 : console.warn("using deprecated parameters for the initialization function; pass a single object instead")), l3 === void 0 && (l3 = new URL("" + new URL("toki_pona_wasm_bg-CLu4qLoQ.wasm", import.meta.url).href, import.meta.url));
+  l3 !== void 0 && (Object.getPrototypeOf(l3) === Object.prototype ? { module_or_path: l3 } = l3 : console.warn("using deprecated parameters for the initialization function; pass a single object instead")), l3 === void 0 && (l3 = new URL("" + new URL("toki_pona_wasm_bg-Du-Cxc92.wasm", import.meta.url).href, import.meta.url));
   const i = Hv();
   (typeof l3 == "string" || typeof Request == "function" && l3 instanceof Request || typeof URL == "function" && l3 instanceof URL) && (l3 = fetch(l3));
   const { instance: c, module: f } = await Gv(await l3, i);

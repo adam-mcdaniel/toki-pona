@@ -92,6 +92,9 @@ fn process_utterance(u: &Utterance) -> ConstituencyNode {
 
 fn process_sentence_block(block: &SentenceBlock) -> Vec<ConstituencyNode> {
     let mut children = Vec::new();
+    if let Some(conj) = &block.conjunction {
+        children.push(ConstituencyNode::particle(conj.clone()));
+    }
     for context in &block.contexts {
         children.push(process_context(context));
         children.push(ConstituencyNode::particle("la".to_string()));

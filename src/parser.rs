@@ -65,6 +65,16 @@ pub fn parse_utterance(input: &str) -> IResult<&str, Utterance> {
 // 1. Sentence Structure
 
 fn parse_sentence_block(input: &str) -> IResult<&str, SentenceBlock> {
+    let (input, conjunction) = opt(terminated(
+        map(match_tag("taso"), |s| s.to_string()),
+        // Optional comma after taso? "taso, ..."
+        opt(match_tag(",")),
+    ))(input)?;
+    // If we consumed a comma, we might need to consume whitespace again?
+    // match_tag uses lexeme, so it consumes trailing whitespace.
+    // opt(match_tag(",")) also consumes trailing whitespace.
+    // So "taso, " -> conjunction="taso", input="...".
+
     let (input, contexts) = many0(terminated(
         parse_context,
         terminated(match_tag("la"), opt(lexeme(one_of(",:")))),
@@ -80,6 +90,7 @@ fn parse_sentence_block(input: &str) -> IResult<&str, SentenceBlock> {
     Ok((
         input,
         SentenceBlock {
+            conjunction,
             contexts,
             main_clause,
         },
@@ -197,6 +208,7 @@ fn parse_context(input: &str) -> IResult<&str, Context> {
     alt((
         map(parse_main_clause, |m| {
             Context::Sentence(Box::new(SentenceBlock {
+                conjunction: None,
                 contexts: vec![],
                 main_clause: m,
             }))
@@ -591,6 +603,19 @@ mod tests {
             "Failed to parse 'taso ...': {:?}",
             result.err()
         );
+    }
+
+    #[test]
+    fn test_taso_sentence_connector() {
+        let input = "taso mi wile kama sona e toki ni.";
+        let result = parse_utterance(input);
+        match result {
+            Ok((_, Utterance::Sentence(sb))) => {
+                assert_eq!(sb.conjunction, Some("taso".to_string()));
+            }
+            Ok(_) => panic!("Expected Sentence"),
+            Err(e) => panic!("Parse failed: {:?}", e),
+        }
     }
 
     #[test]

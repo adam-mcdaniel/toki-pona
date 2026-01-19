@@ -91,6 +91,7 @@ pub enum Utterance {
 #[derive(Debug, Clone, PartialEq)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct SentenceBlock {
+    pub conjunction: Option<String>,
     pub contexts: Vec<Context>,
     pub main_clause: MainClause,
 }
