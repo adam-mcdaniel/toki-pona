@@ -209,15 +209,15 @@ fn parse_context(input: &str) -> IResult<&str, Context> {
 fn parse_main_clause(input: &str) -> IResult<&str, MainClause> {
     alt((
         map(
-            tuple((parse_subject_simple, parse_predicate_unmarked)),
-            |(s, p)| MainClause::Simple {
+            tuple((parse_subject_general, parse_predicate_marked)),
+            |(s, p)| MainClause::General {
                 subject: s,
                 predicate: p,
             },
         ),
         map(
-            tuple((parse_subject_general, parse_predicate_marked)),
-            |(s, p)| MainClause::General {
+            tuple((parse_subject_simple, parse_predicate_unmarked)),
+            |(s, p)| MainClause::Simple {
                 subject: s,
                 predicate: p,
             },
@@ -566,6 +566,17 @@ mod tests {
         assert!(
             result.is_ok(),
             "Failed to parse 'mi sona ala e ni.': {:?}",
+            result.err()
+        );
+    }
+
+    #[test]
+    fn test_mi_mute_li_sona() {
+        let input = "mi mute li sona e ni.";
+        let result = parse_utterance(input);
+        assert!(
+            result.is_ok(),
+            "Failed to parse 'mi mute li sona e ni.': {:?}",
             result.err()
         );
     }
