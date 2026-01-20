@@ -4,7 +4,7 @@ use nom::{
     branch::alt,
     bytes::complete::{tag, take_while, take_while1},
     character::complete::{alpha1, multispace0, one_of},
-    combinator::{cut, map, opt, peek, recognize},
+    combinator::{cut, map, not, opt, peek, recognize},
     multi::{many0, many1},
     sequence::{delimited, pair, preceded, terminated, tuple},
 };
@@ -25,6 +25,12 @@ fn match_tag<'a>(
     t: &'a str,
 ) -> impl FnMut(&'a str) -> IResult<&'a str, &'a str, nom::error::Error<&'a str>> {
     lexeme(tag(t))
+}
+
+fn match_keyword<'a>(
+    t: &'a str,
+) -> impl FnMut(&'a str) -> IResult<&'a str, &'a str, nom::error::Error<&'a str>> {
+    lexeme(terminated(tag(t), peek(not(alpha1))))
 }
 
 // --------------------------------------------------------------------------
@@ -66,7 +72,7 @@ pub fn parse_utterance(input: &str) -> IResult<&str, Utterance> {
 
 fn parse_sentence_block(input: &str) -> IResult<&str, SentenceBlock> {
     let (input, conjunction) = opt(terminated(
-        map(match_tag("taso"), |s| s.to_string()),
+        map(match_keyword("taso"), |s| s.to_string()),
         // Optional comma after taso? "taso, ..."
         opt(match_tag(",")),
     ))(input)?;
@@ -77,7 +83,7 @@ fn parse_sentence_block(input: &str) -> IResult<&str, SentenceBlock> {
 
     let (input, contexts) = many0(terminated(
         parse_context,
-        terminated(match_tag("la"), opt(lexeme(one_of(",:")))),
+        terminated(match_keyword("la"), opt(lexeme(one_of(",:")))),
     ))(input)?;
 
     // If we have contexts, we assume it's a sentence block.
@@ -259,8 +265,8 @@ fn parse_subject_general(input: &str) -> IResult<&str, SubjectGeneral> {
 
 fn parse_conjunction_subject(input: &str) -> IResult<&str, ConjunctionSubject> {
     alt((
-        map(match_tag("en"), |_| ConjunctionSubject::En),
-        map(match_tag("anu"), |_| ConjunctionSubject::Anu),
+        map(match_keyword("en"), |_| ConjunctionSubject::En),
+        map(match_keyword("anu"), |_| ConjunctionSubject::Anu),
     ))(input)
 }
 
@@ -272,8 +278,8 @@ fn parse_predicate_unmarked(input: &str) -> IResult<&str, PredicateUnmarked> {
 
 fn parse_predicate_marker(input: &str) -> IResult<&str, PredicateMarker> {
     alt((
-        map(match_tag("li"), |_| PredicateMarker::Li),
-        map(match_tag("o"), |_| PredicateMarker::O),
+        map(match_keyword("li"), |_| PredicateMarker::Li),
+        map(match_keyword("o"), |_| PredicateMarker::O),
     ))(input)
 }
 
@@ -378,7 +384,7 @@ fn parse_head_predicate(input: &str) -> IResult<&str, HeadPredicate> {
 
 fn parse_preverb_phrase(input: &str) -> IResult<&str, PreverbPhrase> {
     let (input, preverb) = parse_preverb(input)?;
-    let (input, ala) = opt(match_tag("ala"))(input)?;
+    let (input, ala) = opt(match_keyword("ala"))(input)?;
     Ok((
         input,
         PreverbPhrase {
@@ -389,7 +395,7 @@ fn parse_preverb_phrase(input: &str) -> IResult<&str, PreverbPhrase> {
 }
 
 fn parse_direct_object(input: &str) -> IResult<&str, Phrase> {
-    preceded(match_tag("e"), cut(parse_phrase))(input)
+    preceded(match_keyword("e"), cut(parse_phrase))(input)
 }
 
 // 4. Phrases & Modifiers
@@ -402,10 +408,16 @@ fn parse_phrase(input: &str) -> IResult<&str, Phrase> {
 
 fn parse_modifier(input: &str) -> IResult<&str, Modifier> {
     alt((
-        map(preceded(match_tag("pi"), cut(parse_phrase)), Modifier::Pi),
-        map(preceded(match_tag("anu"), cut(parse_phrase)), Modifier::Anu),
         map(
-            preceded(match_tag("nanpa"), cut(parse_number)),
+            preceded(match_keyword("pi"), cut(parse_phrase)),
+            Modifier::Pi,
+        ),
+        map(
+            preceded(match_keyword("anu"), cut(parse_phrase)),
+            Modifier::Anu,
+        ),
+        map(
+            preceded(match_keyword("nanpa"), cut(parse_number)),
             Modifier::Nanpa,
         ),
         parse_modifier_special,
@@ -434,7 +446,7 @@ fn parse_number(input: &str) -> IResult<&str, Number> {
 
 fn parse_prepositional_phrase(input: &str) -> IResult<&str, PrepositionalPhrase> {
     let (input, preposition) = parse_preposition(input)?;
-    let (input, ala_opt) = opt(match_tag("ala"))(input)?;
+    let (input, ala_opt) = opt(match_keyword("ala"))(input)?;
     let (input, object) = parse_phrase(input)?;
     Ok((
         input,
@@ -449,9 +461,9 @@ fn parse_prepositional_phrase(input: &str) -> IResult<&str, PrepositionalPhrase>
 // 6. Interjections & Commands
 
 fn parse_vocative_command(input: &str) -> IResult<&str, VocativeCommand> {
-    let (input, target) = opt(terminated(parse_phrase, match_tag("o")))(input)?;
+    let (input, target) = opt(terminated(parse_phrase, match_keyword("o")))(input)?;
     let (input, _) = if target.is_none() {
-        match_tag("o")(input)?
+        match_keyword("o")(input)?
     } else {
         (input, "o")
     };
@@ -461,13 +473,13 @@ fn parse_vocative_command(input: &str) -> IResult<&str, VocativeCommand> {
 
 fn parse_interjection(input: &str) -> IResult<&str, Interjection> {
     alt((
-        map(tuple((parse_phrase, opt(match_tag("a")))), |(p, a)| {
+        map(tuple((parse_phrase, opt(match_keyword("a")))), |(p, a)| {
             Interjection::Phrase {
                 phrase: p,
                 a: a.is_some(),
             }
         }),
-        map(match_tag("a"), |_| Interjection::A),
+        map(match_keyword("a"), |_| Interjection::A),
     ))(input)
 }
 
@@ -616,6 +628,15 @@ mod tests {
             Ok(_) => panic!("Expected Sentence"),
             Err(e) => panic!("Parse failed: {:?}", e),
         }
+    }
+
+    #[test]
+    fn test_pilin_vs_toki() {
+        let input_toki = "mi toki e ni tawa sina.";
+        assert!(parse_utterance(input_toki).is_ok(), "mi toki ... failed");
+
+        let input_pilin = "mi pilin e ni tawa sina.";
+        assert!(parse_utterance(input_pilin).is_ok(), "mi pilin ... failed");
     }
 
     #[test]
