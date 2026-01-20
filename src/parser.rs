@@ -378,7 +378,7 @@ fn parse_predicate_core(input: &str) -> IResult<&str, PredicateCore> {
 fn parse_head_predicate(input: &str) -> IResult<&str, HeadPredicate> {
     alt((
         map(parse_prepositional_phrase, HeadPredicate::Prepositional),
-        map(parse_phrase, HeadPredicate::Phrase),
+        map(parse_phrase_non_greedy, HeadPredicate::Phrase),
     ))(input)
 }
 
@@ -395,15 +395,36 @@ fn parse_preverb_phrase(input: &str) -> IResult<&str, PreverbPhrase> {
 }
 
 fn parse_direct_object(input: &str) -> IResult<&str, Phrase> {
-    preceded(match_keyword("e"), cut(parse_phrase))(input)
+    preceded(match_keyword("e"), cut(parse_phrase_non_greedy))(input)
 }
 
 // 4. Phrases & Modifiers
 
 fn parse_phrase(input: &str) -> IResult<&str, Phrase> {
+    parse_phrase_greedy(input)
+}
+
+fn parse_phrase_greedy(input: &str) -> IResult<&str, Phrase> {
     let (input, head) = parse_word(input)?;
     let (input, modifiers) = many0(parse_modifier)(input)?;
     Ok((input, Phrase { head, modifiers }))
+}
+
+fn parse_phrase_non_greedy(input: &str) -> IResult<&str, Phrase> {
+    let (input, head) = parse_word(input)?;
+    let (input, modifiers) = many0(parse_modifier_non_greedy)(input)?;
+    Ok((input, Phrase { head, modifiers }))
+}
+
+fn parse_modifier_non_greedy(input: &str) -> IResult<&str, Modifier> {
+    // If we see a valid PP, we want to FAIL here so many0 stops.
+    if let Ok(_) = peek(parse_prepositional_phrase)(input) {
+        return Err(nom::Err::Error(nom::error::Error::new(
+            input,
+            nom::error::ErrorKind::Tag,
+        )));
+    }
+    parse_modifier(input)
 }
 
 fn parse_modifier(input: &str) -> IResult<&str, Modifier> {
@@ -637,6 +658,121 @@ mod tests {
 
         let input_pilin = "mi pilin e ni tawa sina.";
         assert!(parse_utterance(input_pilin).is_ok(), "mi pilin ... failed");
+    }
+
+    #[test]
+    fn test_modifier_pp_ambiguity() {
+        // "tawa sina" should be parsed as a PP on the predicate, NOT as modifiers of "ni".
+        let input = "mi toki e ni tawa sina.";
+        let result = parse_utterance(input);
+        match result {
+            Ok((_, Utterance::Sentence(sb))) => {
+                match sb.main_clause {
+                    MainClause::Simple { predicate, .. } => {
+                        // Predicate should have 1 DO and 1 PP
+                        let core = predicate.0;
+                        assert_eq!(core.direct_objects.len(), 1, "Expected 1 direct object");
+                        assert_eq!(
+                            core.prepositional_phrases.len(),
+                            1,
+                            "Expected 1 prepositional phrase"
+                        );
+
+                        // Verify the object is just "ni"
+                        let obj = &core.direct_objects[0];
+                        assert_eq!(
+                            obj.modifiers.len(),
+                            0,
+                            "Object 'ni' should have no modifiers"
+                        );
+                    }
+                    _ => panic!("Expected Simple MainClause"),
+                }
+            }
+            Ok(_) => panic!("Expected Sentence"),
+            Err(e) => panic!("Parse failed: {:?}", e),
+        }
+    }
+
+    #[test]
+    fn test_ambiguity_rigorous() {
+        // Case 1: "mi lukin e tomo tawa" (Object modifier, no PP)
+        // 'tawa' is a preposition word, but no object follows it in the PP sense (token boundaries).
+        // Actually 'tawa .' -> parse_pp fails because it needs object.
+        let input = "mi lukin e tomo tawa.";
+        let (_, u) = parse_utterance(input).unwrap();
+        if let Utterance::Sentence(sb) = u {
+            if let MainClause::Simple {
+                predicate: PredicateUnmarked(core),
+                ..
+            } = sb.main_clause
+            {
+                assert_eq!(core.direct_objects.len(), 1);
+                assert_eq!(core.prepositional_phrases.len(), 0);
+                assert_eq!(core.direct_objects[0].modifiers.len(), 1);
+                if let Modifier::Word(Word::Content(s)) = &core.direct_objects[0].modifiers[0] {
+                    assert_eq!(s, "tawa");
+                } else {
+                    panic!("Expected word 'tawa'");
+                }
+            }
+        }
+
+        // Case 2: "mi lukin e tomo tawa pi mi" (Object modifiers, no PP)
+        // 'tawa' is modifier. 'pi' follows. 'tawa pi ...' is NOT a valid PP start.
+        // So 'tawa' should be consumed as modifier, then 'pi mi' as modifier.
+        let input = "mi lukin e tomo tawa pi mi.";
+        let (_, u) = parse_utterance(input).unwrap();
+        if let Utterance::Sentence(sb) = u {
+            if let MainClause::Simple {
+                predicate: PredicateUnmarked(core),
+                ..
+            } = sb.main_clause
+            {
+                assert_eq!(core.direct_objects.len(), 1);
+                assert_eq!(core.prepositional_phrases.len(), 0);
+                // tomo + tawa + pi mi
+                assert_eq!(core.direct_objects[0].modifiers.len(), 2);
+            }
+        }
+
+        // Case 3: "mi moku e kili kepeken ilo" (Object + PP)
+        // 'kepeken' starts a PP. Should split.
+        let input = "mi moku e kili kepeken ilo.";
+        let (_, u) = parse_utterance(input).unwrap();
+        if let Utterance::Sentence(sb) = u {
+            if let MainClause::Simple {
+                predicate: PredicateUnmarked(core),
+                ..
+            } = sb.main_clause
+            {
+                assert_eq!(core.direct_objects[0].head, Word::Content("kili".into()));
+                assert_eq!(core.direct_objects[0].modifiers.len(), 0);
+                assert_eq!(core.prepositional_phrases.len(), 1);
+                assert_eq!(
+                    core.prepositional_phrases[0].preposition,
+                    Preposition::Kepeken
+                );
+            }
+        }
+
+        // Case 4: "mi lukin e jan sama sina" (Object + PP)
+        // Ambiguous semantic: "I see your sibling" vs "I see a person like you".
+        // Parser should now enforce separation: Object(jan) + PP(sama sina).
+        let input = "mi lukin e jan sama sina.";
+        let (_, u) = parse_utterance(input).unwrap();
+        if let Utterance::Sentence(sb) = u {
+            if let MainClause::Simple {
+                predicate: PredicateUnmarked(core),
+                ..
+            } = sb.main_clause
+            {
+                assert_eq!(core.direct_objects[0].head, Word::Content("jan".into()));
+                assert_eq!(core.direct_objects[0].modifiers.len(), 0); // 'sama' not attached
+                assert_eq!(core.prepositional_phrases.len(), 1);
+                assert_eq!(core.prepositional_phrases[0].preposition, Preposition::Sama);
+            }
+        }
     }
 
     #[test]
